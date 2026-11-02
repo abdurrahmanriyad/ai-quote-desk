@@ -1,0 +1,32 @@
+{
+  "id": "rfq-019",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 100,
+      "heightMm": 450,
+      "quantity": 50,
+      "bends": 1,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 793,
+        "lineCents": 39650,
+        "weightKg": 18.09,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 39650,
+    "shippingCents": 3500,
+    "totalCents": 43150
+  },
+  "containsInjection": false
+}

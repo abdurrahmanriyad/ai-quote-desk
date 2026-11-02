@@ -1,0 +1,48 @@
+{
+  "id": "rfq-015",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 1,
+      "widthMm": 250,
+      "heightMm": 400,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "shelf",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 350,
+      "heightMm": 600,
+      "quantity": 50,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 471,
+        "lineCents": 18840,
+        "weightKg": 31.400000000000002,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 4005,
+        "lineCents": 200250,
+        "weightKg": 168.00000000000003,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 219090,
+    "shippingCents": 24000,
+    "totalCents": 243090
+  },
+  "containsInjection": false
+}

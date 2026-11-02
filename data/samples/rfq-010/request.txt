@@ -1,0 +1,13 @@
+From: Tom Becker <tom@beckermachine.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Hi team,
+
+Please quote these parts:
+
+- 5 x gusset, 2 mm 304, 150 x 100 mm, 4 bends, finish: powder coated
+- 100 x base plate, 1 mm 304 stainless, 150 x 650 mm, 4 bends, finish: powdercoat
+
+Tom Becker
+Becker Machine Works

@@ -1,0 +1,12 @@
+From: Omar Haddad <omar@atlassignworks.example>
+To: quotes@northline.example
+Subject: Quote request
+
+Hello,
+
+Could you quote the following?
+
+- 50 x enclosure panel, 1 mm SS304, 250 x 200 mm, 4 bends
+
+Omar Haddad
+Atlas Signworks

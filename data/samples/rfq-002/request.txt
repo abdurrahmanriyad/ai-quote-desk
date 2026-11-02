@@ -1,0 +1,14 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Hi team,
+
+Please quote these parts:
+
+- 5 x base plate, 1 mm 304, 200 x 250 mm, 1 bend, finish: painted
+- 25 x enclosure panel, 3 mm stainless steel, 250 x 150 mm, 2 bends, finish: as cut
+- 500 x enclosure panel, 1 mm 304, 400 x 350 mm, 1 bend, finish: zinc
+
+Grace Lindqvist
+Fjord Marine Parts

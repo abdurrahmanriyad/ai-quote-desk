@@ -1,0 +1,34 @@
+{
+  "id": "rfq-026",
+  "kind": "missing",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 900,
+      "heightMm": 350,
+      "quantity": null,
+      "bends": 4,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 150,
+      "heightMm": 600,
+      "quantity": 150,
+      "bends": 1,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

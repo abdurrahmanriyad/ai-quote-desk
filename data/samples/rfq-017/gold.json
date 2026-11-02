@@ -1,0 +1,32 @@
+{
+  "id": "rfq-017",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "AL5052",
+      "thicknessMm": 5,
+      "widthMm": 700,
+      "heightMm": 450,
+      "quantity": 40,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 4967,
+        "lineCents": 198680,
+        "weightKg": 168.84,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 198680,
+    "shippingCents": 24000,
+    "totalCents": 222680
+  },
+  "containsInjection": false
+}

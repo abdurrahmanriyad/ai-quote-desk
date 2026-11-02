@@ -1,0 +1,48 @@
+{
+  "id": "rfq-028",
+  "kind": "spreadsheet",
+  "source": "request.csv",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": 500,
+      "heightMm": 100,
+      "quantity": 40,
+      "bends": 2,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "shelf",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 850,
+      "heightMm": 100,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1597,
+        "lineCents": 63880,
+        "weightKg": 48.00000000000001,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 1938,
+        "lineCents": 77520,
+        "weightKg": 54.400000000000006,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 141400,
+    "shippingCents": 24000,
+    "totalCents": 165400
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,49 @@
+{
+  "id": "rfq-018",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "AL5052",
+      "thicknessMm": 2,
+      "widthMm": 450,
+      "heightMm": 650,
+      "quantity": 40,
+      "bends": 2,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 6,
+      "widthMm": 400,
+      "heightMm": 700,
+      "quantity": 150,
+      "bends": 2,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2658,
+        "lineCents": 106320,
+        "weightKg": 62.712,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 4028,
+        "lineCents": 604200,
+        "weightKg": 1978.2000000000003,
+        "discountRate": 0.1
+      }
+    ],
+    "subtotalCents": 710520,
+    "shippingCents": null,
+    "totalCents": null,
+    "needsFreightQuote": true
+  },
+  "containsInjection": false
+}

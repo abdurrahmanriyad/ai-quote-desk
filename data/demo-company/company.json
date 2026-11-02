@@ -1,0 +1,7 @@
+{
+  "name": "Northline Fabrication",
+  "note": "Fictional company. All catalog data, prices and customer requests in this repo are synthetic.",
+  "currency": "USD",
+  "quoteValidDays": 30,
+  "email": "quotes@northline.example"
+}

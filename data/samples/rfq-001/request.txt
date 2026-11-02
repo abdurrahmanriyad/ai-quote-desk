@@ -1,0 +1,14 @@
+From: Luis Romero <luis@summithvac.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Good morning,
+
+Please quote these parts:
+
+- 25 x base plate, 1 mm stainless steel, 750 x 100 mm, 2 bends, finish: galvanized plating
+- 40 x mounting bracket, 1.5 mm A36, 550 x 300 mm, flat, no bends, finish: powder coat
+- 10 x mounting bracket, 3 mm stainless, 700 x 350 mm, 2 bends, finish: painted
+
+Luis Romero
+Summit HVAC Supply

@@ -1,0 +1,12 @@
+From: Priya Nair <priya@cedarlanedisplays.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Hello,
+
+Please quote these parts:
+
+- 20 x mounting bracket, 1.5 mm 304, 800 x 600 mm, flat, no bends, finish: zinc
+
+Priya Nair
+Cedar Lane Displays

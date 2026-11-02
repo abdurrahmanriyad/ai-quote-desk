@@ -1,0 +1,25 @@
+{
+  "id": "rfq-021",
+  "kind": "missing",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "MS",
+      "thicknessMm": 1.5,
+      "widthMm": null,
+      "heightMm": null,
+      "quantity": 40,
+      "bends": 1,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: width is missing",
+      "Line 1: height is missing"
+    ]
+  },
+  "containsInjection": false
+}

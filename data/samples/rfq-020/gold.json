@@ -1,0 +1,48 @@
+{
+  "id": "rfq-020",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 450,
+      "heightMm": 400,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "enclosure panel",
+      "materialCode": "SS304",
+      "thicknessMm": 1,
+      "widthMm": 650,
+      "heightMm": 550,
+      "quantity": 10,
+      "bends": 1,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 679,
+        "lineCents": 27160,
+        "weightKg": 19.296,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 3691,
+        "lineCents": 36910,
+        "weightKg": 28.6,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 64070,
+    "shippingCents": 9500,
+    "totalCents": 73570
+  },
+  "containsInjection": false
+}

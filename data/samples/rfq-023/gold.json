@@ -1,0 +1,34 @@
+{
+  "id": "rfq-023",
+  "kind": "missing",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "MS",
+      "thicknessMm": null,
+      "widthMm": 700,
+      "heightMm": 250,
+      "quantity": 500,
+      "bends": 2,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "enclosure panel",
+      "materialCode": "MS",
+      "thicknessMm": 1.5,
+      "widthMm": 350,
+      "heightMm": 650,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: thickness is missing"
+    ]
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,19 @@
+{
+  "scrapFactor": 1.15,
+  "machineCentsPerMin": 250,
+  "bendCentsEach": 90,
+  "setupCentsPerLine": 4500,
+  "marginRate": 0.3,
+  "quantityBreaks": [
+    { "minQuantity": 1, "discountRate": 0 },
+    { "minQuantity": 25, "discountRate": 0.05 },
+    { "minQuantity": 100, "discountRate": 0.1 },
+    { "minQuantity": 500, "discountRate": 0.15 }
+  ],
+  "shippingBands": [
+    { "maxKg": 25, "cents": 3500 },
+    { "maxKg": 100, "cents": 9500 },
+    { "maxKg": 500, "cents": 24000 }
+  ],
+  "freightQuoteAboveKg": 500
+}

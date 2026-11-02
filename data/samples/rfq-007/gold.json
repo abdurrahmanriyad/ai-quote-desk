@@ -1,0 +1,48 @@
+{
+  "id": "rfq-007",
+  "kind": "clean",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 250,
+      "heightMm": 500,
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 1,
+      "widthMm": 800,
+      "heightMm": 150,
+      "quantity": 40,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1262,
+        "lineCents": 126200,
+        "weightKg": 100.50000000000001,
+        "discountRate": 0.1
+      },
+      {
+        "unitCents": 818,
+        "lineCents": 32720,
+        "weightKg": 37.68,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 158920,
+    "shippingCents": 24000,
+    "totalCents": 182920
+  },
+  "containsInjection": false
+}

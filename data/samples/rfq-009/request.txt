@@ -1,0 +1,14 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Hello,
+
+Please quote these parts:
+
+- 150 x mounting bracket, 5 mm aluminium, 250 x 700 mm, flat, no bends, finish: galvanized plating
+- 40 x base plate, 1.5 mm stainless, 850 x 600 mm, flat, no bends, finish: no finish
+- 25 x shelf, 5 mm alu, 700 x 550 mm, 1 bend, finish: zinc
+
+Grace Lindqvist
+Fjord Marine Parts

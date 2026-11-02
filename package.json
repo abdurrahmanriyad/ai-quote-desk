@@ -1,0 +1,35 @@
+{
+  "name": "ai-quote-desk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turn messy customer quote requests into accurate drafts a person approves.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "samples": "tsx scripts/generate-samples.ts",
+    "verify": "npm run typecheck && npm test",
+    "db:up": "docker compose up -d --wait",
+    "migrate": "tsx scripts/migrate.ts",
+    "intake": "tsx scripts/intake.ts",
+    "worker": "tsx scripts/worker.ts",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "verify:full": "npm run verify && npm run db:up && npm run migrate && npm run test:integration"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "bullmq": "^6.5.3",
+    "ioredis": "^6.0.0",
+    "pg": "^8.23.1"
+  },
+  "license": "MIT"
+}

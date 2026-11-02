@@ -1,0 +1,32 @@
+{
+  "id": "rfq-016",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 3,
+      "widthMm": 450,
+      "heightMm": 100,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 680,
+        "lineCents": 27200,
+        "weightKg": 42.39,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 27200,
+    "shippingCents": 9500,
+    "totalCents": 36700
+  },
+  "containsInjection": false
+}

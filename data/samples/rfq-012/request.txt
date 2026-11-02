@@ -1,0 +1,13 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Hi team,
+
+Please quote these parts:
+
+- 40 x mounting bracket, 3 mm stainless steel, 350 x 200 mm, flat, no bends, finish: no finish
+- 5 x base plate, 5 mm mild steel, 350 x 500 mm, flat, no bends, finish: zinc
+
+Grace Lindqvist
+Fjord Marine Parts

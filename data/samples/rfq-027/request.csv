@@ -1,0 +1,14 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: RFQ parts list
+
+Hi team,
+
+Please quote the attached parts list.
+
+Grace Lindqvist
+Fjord Marine Parts
+
+--- attachment: parts.csv ---
+Part,Material,Thickness mm,Width mm,Height mm,Qty,Bends,Finish
+mounting bracket,cold rolled,1,500,350,25,2,raw

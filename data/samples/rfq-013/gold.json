@@ -1,0 +1,49 @@
+{
+  "id": "rfq-013",
+  "kind": "messy",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 700,
+      "heightMm": 550,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 6,
+      "widthMm": 950,
+      "heightMm": 550,
+      "quantity": 500,
+      "bends": 2,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 7086,
+        "lineCents": 283440,
+        "weightKg": 246.4,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 7121,
+        "lineCents": 3560500,
+        "weightKg": 12304.875,
+        "discountRate": 0.15
+      }
+    ],
+    "subtotalCents": 3843940,
+    "shippingCents": null,
+    "totalCents": null,
+    "needsFreightQuote": true
+  },
+  "containsInjection": false
+}

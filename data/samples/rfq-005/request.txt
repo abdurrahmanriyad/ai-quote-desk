@@ -1,0 +1,14 @@
+From: Priya Nair <priya@cedarlanedisplays.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Good morning,
+
+Please quote these parts:
+
+- 10 x cover plate, 2 mm CRS, 250 x 350 mm, 2 bends, finish: zinc plated
+- 25 x mounting bracket, 2 mm CRS, 100 x 400 mm, 1 bend, finish: raw
+- 5 x mounting bracket, 1 mm steel, 550 x 450 mm, flat, no bends, finish: raw
+
+Priya Nair
+Cedar Lane Displays

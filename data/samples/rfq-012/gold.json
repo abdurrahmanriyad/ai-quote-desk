@@ -1,0 +1,48 @@
+{
+  "id": "rfq-012",
+  "kind": "clean",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": 350,
+      "heightMm": 200,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 350,
+      "heightMm": 500,
+      "quantity": 5,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1723,
+        "lineCents": 68920,
+        "weightKg": 67.20000000000002,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 3618,
+        "lineCents": 18090,
+        "weightKg": 34.34375,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 87010,
+    "shippingCents": 24000,
+    "totalCents": 111010
+  },
+  "containsInjection": false
+}

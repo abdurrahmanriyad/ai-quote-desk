@@ -1,0 +1,24 @@
+{
+  "id": "rfq-024",
+  "kind": "missing",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": 2,
+      "widthMm": 800,
+      "heightMm": 200,
+      "quantity": null,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

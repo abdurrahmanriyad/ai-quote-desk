@@ -1,0 +1,12 @@
+From: Luis Romero <luis@summithvac.example>
+To: quotes@northline.example
+Subject: Quote request
+
+Good morning,
+
+Could you quote the following?
+
+- some shelf, 2 mm AL5052, 800 x 200 mm, flat, no bends, finish: galvanized plating
+
+Luis Romero
+Summit HVAC Supply

@@ -1,0 +1,49 @@
+{
+  "id": "rfq-008",
+  "kind": "clean",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 6,
+      "widthMm": 750,
+      "heightMm": 200,
+      "quantity": 500,
+      "bends": 1,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "enclosure panel",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 650,
+      "heightMm": 700,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1694,
+        "lineCents": 847000,
+        "weightKg": 3532.4999999999995,
+        "discountRate": 0.15
+      },
+      {
+        "unitCents": 4206,
+        "lineCents": 210300,
+        "weightKg": 357.175,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 1057300,
+    "shippingCents": null,
+    "totalCents": null,
+    "needsFreightQuote": true
+  },
+  "containsInjection": false
+}

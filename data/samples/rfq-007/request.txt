@@ -1,0 +1,13 @@
+From: Luis Romero <luis@summithvac.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Good morning,
+
+Please quote these parts:
+
+- 100 x enclosure panel, 3 mm aluminium, 250 x 500 mm, flat, no bends, finish: galvanized plating
+- 40 x cover plate, 1 mm CRS, 800 x 150 mm, 2 bends, finish: as cut
+
+Luis Romero
+Summit HVAC Supply

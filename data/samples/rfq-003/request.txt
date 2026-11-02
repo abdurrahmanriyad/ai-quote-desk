@@ -1,0 +1,12 @@
+From: Omar Haddad <omar@atlassignworks.example>
+To: quotes@northline.example
+Subject: Request for quote
+
+Good morning,
+
+Please quote these parts:
+
+- 5 x shelf, 3 mm 304, 800 x 650 mm, 4 bends, finish: galvanized plating
+
+Omar Haddad
+Atlas Signworks

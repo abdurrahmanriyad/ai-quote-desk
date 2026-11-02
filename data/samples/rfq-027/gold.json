@@ -1,0 +1,32 @@
+{
+  "id": "rfq-027",
+  "kind": "spreadsheet",
+  "source": "request.csv",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "MS",
+      "thicknessMm": 1,
+      "widthMm": 500,
+      "heightMm": 350,
+      "quantity": 25,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 981,
+        "lineCents": 24525,
+        "weightKg": 34.34375,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 24525,
+    "shippingCents": 9500,
+    "totalCents": 34025
+  },
+  "containsInjection": false
+}

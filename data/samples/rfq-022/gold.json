@@ -1,0 +1,24 @@
+{
+  "id": "rfq-022",
+  "kind": "missing",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "SS304",
+      "thicknessMm": 1,
+      "widthMm": 250,
+      "heightMm": 200,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": null
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: finish is missing"
+    ]
+  },
+  "containsInjection": false
+}

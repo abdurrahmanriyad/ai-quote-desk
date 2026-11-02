@@ -1,0 +1,15 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: RFQ parts list
+
+Good morning,
+
+Please quote the attached parts list.
+
+Maya Torres
+Harbor Kitchens
+
+--- attachment: parts.csv ---
+Part,Material,Thickness mm,Width mm,Height mm,Qty,Bends,Finish
+base plate,stainless steel,3,500,100,40,2,raw
+shelf,304 stainless,2,850,100,40,0,powder coat

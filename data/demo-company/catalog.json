@@ -1,0 +1,36 @@
+{
+  "materials": [
+    {
+      "code": "MS",
+      "name": "Mild steel",
+      "aliases": ["mild steel", "steel", "cold rolled", "CRS", "A36"],
+      "densityKgPerM3": 7850,
+      "costCentsPerKg": 140,
+      "thicknessesMm": [1, 1.5, 2, 3, 5, 6],
+      "cutSpeedMmPerMin": 3000
+    },
+    {
+      "code": "SS304",
+      "name": "Stainless steel 304",
+      "aliases": ["stainless", "stainless steel", "304", "SS304", "304 stainless"],
+      "densityKgPerM3": 8000,
+      "costCentsPerKg": 520,
+      "thicknessesMm": [1, 1.5, 2, 3],
+      "cutSpeedMmPerMin": 1800
+    },
+    {
+      "code": "AL5052",
+      "name": "Aluminum 5052",
+      "aliases": ["aluminum", "aluminium", "alu", "5052", "AL5052"],
+      "densityKgPerM3": 2680,
+      "costCentsPerKg": 480,
+      "thicknessesMm": [1, 1.5, 2, 3, 5],
+      "cutSpeedMmPerMin": 3500
+    }
+  ],
+  "finishes": [
+    { "code": "NONE", "name": "No finish", "aliases": ["none", "raw", "as cut", "no finish"], "centsPerM2": 0 },
+    { "code": "POWDER", "name": "Powder coat", "aliases": ["powder coat", "powder coated", "powdercoat", "painted"], "centsPerM2": 2800 },
+    { "code": "ZINC", "name": "Zinc plate", "aliases": ["zinc", "zinc plated", "galvanized plating"], "centsPerM2": 2200 }
+  ]
+}
