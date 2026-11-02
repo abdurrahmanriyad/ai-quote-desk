@@ -8,7 +8,7 @@ Businesses that quote custom work often receive requests as emails, PDFs and spr
 
 ![AI Quote Desk: reviewing a draft, fixing a missing detail and approving the quote](docs/demo.gif)
 
-[Watch the MP4](docs/demo.mp4). This walkthrough uses real extraction on synthetic demo data.
+[Watch the full walkthrough](docs/demo.mp4). It shows real AI extraction on fictional demo data.
 
 ## What exists today
 
