@@ -1,0 +1,49 @@
+{
+  "id": "eval-017",
+  "kind": "inches",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 203.2,
+      "heightMm": 228.6,
+      "quantity": 5,
+      "bends": 2,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 609.6,
+      "heightMm": 406.4,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1925,
+        "lineCents": 9625,
+        "weightKg": 1.867351104,
+        "discountRate": 0
+      },
+      {
+        "unitCents": 3121,
+        "lineCents": 31210,
+        "weightKg": 97.2385152,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 40835,
+    "shippingCents": 9500,
+    "totalCents": 50335
+  },
+  "containsInjection": false
+}

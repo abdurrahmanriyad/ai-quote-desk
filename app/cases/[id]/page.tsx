@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { approve, saveLines } from '../../actions';
-import { catalog, company, context } from '../../../src/app-context';
+import { catalog, company, context, requireViewer } from '../../../src/app-context';
 import { money } from '../../../src/review/quote-pdf';
 import { clarificationEmail, quoteEmail } from '../../../src/review/replies';
 import { getReview } from '../../../src/review/review';
@@ -29,13 +29,15 @@ export default async function CasePage({
   const { error } = await searchParams;
   if (!UUID.test(id)) notFound();
 
-  const { db, storage, tenantId } = await context();
+  const { tenantId, canEdit } = await requireViewer();
+  const { db, storage } = await context();
   const review = await getReview(db, tenantId, id);
   if (!review) notFound();
 
   const working = review.status === 'received' || review.status === 'processing';
   const draft = review.draft;
-  const editable = review.status === 'needs_review';
+  const open = review.status === 'needs_review';
+  const editable = open && canEdit;
   const price = draft?.price;
   const textSource = review.document && !/pdf|image/.test(review.document.mediaType);
   const sourceText = textSource
@@ -145,7 +147,7 @@ export default async function CasePage({
               </form>
             )}
 
-            {editable && !price.ok && (
+            {open && !price.ok && (
               <details open>
                 <summary>Suggested reply to the customer</summary>
                 <pre className="reply">{clarificationEmail(draft.customer.name, price.problems, draft.lines.map((line) => line.description), company.name)}</pre>

@@ -1,0 +1,13 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Re: RFQ shelf
+
+Update after talking to the shop floor: drop the gusset completely, and we need 50 of the shelf, not 40. Everything else stays as below.
+
+On Monday I wrote:
+> 40 x shelf, 2 mm aluminum 5052, 450 x 300 mm, no bends, finish: powder coat
+> 40 x base plate, 1.5 mm aluminum 5052, 800 x 450 mm, no bends, finish: powder coat
+> 25 x gusset, 5 mm aluminum 5052, 500 x 150 mm, 2 bends, finish: no finish
+
+Maya Torres
+Harbor Kitchens

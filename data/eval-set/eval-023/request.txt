@@ -1,0 +1,11 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+20 x cable tray, 1 mm aluminum 5052, 6" x 12", 4 bends, finish: no finish
+100 x mounting bracket, 2 mm aluminum 5052, 24" x 12", 1 bends, finish: no finish
+
+Daniel Okafor
+Ridgeway Controls

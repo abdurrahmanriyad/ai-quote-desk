@@ -9,7 +9,8 @@ import {
   type QuotePrice,
 } from '../domain/pricing';
 import type { ExtractionResult } from '../extraction/extract';
-import { interpretLine, verifyEvidence } from '../extraction/interpret';
+import { assertWithinBudget, recordUsage } from '../usage/index';
+import { interpretationNotes, interpretLine, verifyEvidence } from '../extraction/interpret';
 import { detectMediaType, safeDisplayName } from './files';
 
 export type CaseStatus = 'received' | 'processing' | 'needs_review' | 'failed';
@@ -155,6 +156,7 @@ export type Pipeline = {
   catalog: Catalog;
   rules: PricingRules;
   extract: (mediaType: string, bytes: Buffer) => Promise<ExtractionResult>;
+  monthlyBudgetUsd?: number;
 };
 
 const TEXT_TYPES = new Set(['text/plain', 'text/csv', 'message/rfc822']);
@@ -181,13 +183,18 @@ export async function processCase(deps: Pipeline, job: { tenantId: string; caseI
   const bytes = await storage.get(document.storageKey);
   if (sha256(bytes) !== document.sha256) throw new Error(`Stored file changed: ${document.id}`);
 
+  await assertWithinBudget(db, job.tenantId, deps.monthlyBudgetUsd ?? 5);
   const { extraction, usage, model } = await deps.extract(document.mediaType, bytes);
+  await recordUsage(db, { ...job, model, usage });
   const lines = extraction.lines.map((line) => interpretLine(line, deps.catalog));
   const price = priceQuote(lines, deps.catalog, deps.rules);
 
-  const reviewIssues = TEXT_TYPES.has(document.mediaType)
-    ? verifyEvidence(extraction, bytes.toString('utf8'))
-    : ['Quotes from this file type are not checked automatically yet'];
+  const reviewIssues = [
+    ...(TEXT_TYPES.has(document.mediaType)
+      ? verifyEvidence(extraction, bytes.toString('utf8'))
+      : ['Quotes from this file type are not checked automatically yet']),
+    ...interpretationNotes(extraction, deps.catalog),
+  ];
   if (extraction.containsInstructionsToSoftware) {
     reviewIssues.push('The request contains text trying to instruct software');
   }

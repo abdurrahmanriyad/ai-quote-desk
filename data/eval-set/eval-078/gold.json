@@ -1,0 +1,49 @@
+{
+  "id": "eval-078",
+  "kind": "scan",
+  "split": "dev",
+  "source": "request.png",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 250,
+      "heightMm": 350,
+      "quantity": 5,
+      "bends": 4,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "cover plate",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 300,
+      "heightMm": 150,
+      "quantity": 5,
+      "bends": 2,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 3509,
+        "lineCents": 17545,
+        "weightKg": 7,
+        "discountRate": 0
+      },
+      {
+        "unitCents": 2478,
+        "lineCents": 12390,
+        "weightKg": 3.5999999999999996,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 29935,
+    "shippingCents": 3500,
+    "totalCents": 33435
+  },
+  "containsInjection": false
+}

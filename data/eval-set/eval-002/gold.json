@@ -1,0 +1,33 @@
+{
+  "id": "eval-002",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "AL5052",
+      "thicknessMm": 1.5,
+      "widthMm": 450,
+      "heightMm": 200,
+      "quantity": 5,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2578,
+        "lineCents": 12890,
+        "weightKg": 1.8090000000000002,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 12890,
+    "shippingCents": 3500,
+    "totalCents": 16390
+  },
+  "containsInjection": false
+}

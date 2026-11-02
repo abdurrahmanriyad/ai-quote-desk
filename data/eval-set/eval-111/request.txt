@@ -1,0 +1,8 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: Hello
+
+I am out of the office until Monday and will reply when I return.
+
+Daniel Okafor
+Ridgeway Controls

@@ -46,7 +46,7 @@ async function draftCase(line = requested(), suspicious = false) {
       catalog,
       rules,
       extract: async () => ({
-        model: 'test-model',
+        model: 'claude-haiku-5-5',
         usage: { inputTokens: 1, outputTokens: 1 },
         extraction: {
           customer: { name: 'Maya', company: 'Harbor', email: null },

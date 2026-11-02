@@ -8,6 +8,8 @@ export type Material = {
   code: string;
   name: string;
   aliases: string[];
+  /** Vague names that match this entry but need a person to confirm. */
+  assumedAliases?: string[];
   densityKgPerM3: number;
   costCentsPerKg: number;
   thicknessesMm: number[];

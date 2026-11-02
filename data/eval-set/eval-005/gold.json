@@ -1,0 +1,33 @@
+{
+  "id": "eval-005",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 350,
+      "heightMm": 350,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2300,
+        "lineCents": 23000,
+        "weightKg": 48.08125,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 23000,
+    "shippingCents": 9500,
+    "totalCents": 32500
+  },
+  "containsInjection": false
+}

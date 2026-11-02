@@ -1,0 +1,49 @@
+{
+  "id": "eval-037",
+  "kind": "table",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 100,
+      "heightMm": 300,
+      "quantity": 5,
+      "bends": 4,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "access door",
+      "materialCode": "AL5052",
+      "thicknessMm": 5,
+      "widthMm": 550,
+      "heightMm": 200,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2260,
+        "lineCents": 11300,
+        "weightKg": 5.8875,
+        "discountRate": 0
+      },
+      {
+        "unitCents": 2189,
+        "lineCents": 109450,
+        "weightKg": 73.70000000000002,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 120750,
+    "shippingCents": 9500,
+    "totalCents": 130250
+  },
+  "containsInjection": false
+}

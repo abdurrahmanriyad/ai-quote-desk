@@ -1,0 +1,33 @@
+{
+  "id": "eval-085",
+  "kind": "scan",
+  "split": "test",
+  "source": "request.png",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 500,
+      "heightMm": 200,
+      "quantity": 20,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2305,
+        "lineCents": 46100,
+        "weightKg": 78.5,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 46100,
+    "shippingCents": 9500,
+    "totalCents": 55600
+  },
+  "containsInjection": false
+}

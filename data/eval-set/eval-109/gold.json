@@ -1,0 +1,25 @@
+{
+  "id": "eval-109",
+  "kind": "unknown",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": null,
+      "thicknessMm": 3,
+      "widthMm": 550,
+      "heightMm": 100,
+      "quantity": 5,
+      "bends": 4,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,49 @@
+{
+  "id": "eval-073",
+  "kind": "scan",
+  "split": "test",
+  "source": "request.png",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 750,
+      "heightMm": 400,
+      "quantity": 40,
+      "bends": 2,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "shelf",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 200,
+      "heightMm": 100,
+      "quantity": 5,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 4648,
+        "lineCents": 185920,
+        "weightKg": 144,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 1758,
+        "lineCents": 8790,
+        "weightKg": 1.6,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 194710,
+    "shippingCents": 24000,
+    "totalCents": 218710
+  },
+  "containsInjection": false
+}

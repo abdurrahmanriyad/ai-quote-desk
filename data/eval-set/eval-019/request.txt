@@ -1,0 +1,11 @@
+From: Hana Sato <hana@lumenenclosures.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+10 x cover plate, 2 mm aluminum 5052, 18" x 6", 1 bends, finish: zinc plate
+20 x enclosure panel, 1.5 mm stainless steel 304, 10" x 12", 2 bends, finish: powder coat
+
+Hana Sato
+Lumen Enclosures

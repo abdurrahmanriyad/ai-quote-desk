@@ -1,0 +1,25 @@
+{
+  "id": "eval-057",
+  "kind": "conflict",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": "AL5052",
+      "thicknessMm": 1.5,
+      "widthMm": 450,
+      "heightMm": 550,
+      "quantity": null,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

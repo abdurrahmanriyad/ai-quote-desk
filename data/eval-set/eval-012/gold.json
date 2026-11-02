@@ -1,0 +1,33 @@
+{
+  "id": "eval-012",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": 2,
+      "widthMm": 600,
+      "heightMm": 300,
+      "quantity": 5,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 3310,
+        "lineCents": 16550,
+        "weightKg": 4.824,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 16550,
+    "shippingCents": 3500,
+    "totalCents": 20050
+  },
+  "containsInjection": false
+}

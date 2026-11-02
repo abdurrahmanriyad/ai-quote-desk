@@ -1,0 +1,11 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+5 x mounting bracket, 3 mm aluminum 5052, 8" x 9", 2 bends, finish: no finish
+10 x cover plate, 5 mm mild steel, 24" x 16", 0 bends, finish: no finish
+
+Grace Lindqvist
+Fjord Marine Parts

@@ -1,0 +1,65 @@
+{
+  "id": "eval-029",
+  "kind": "table",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 100,
+      "heightMm": 400,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "access door",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 100,
+      "heightMm": 550,
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "cable tray",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": 200,
+      "heightMm": 500,
+      "quantity": 10,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1283,
+        "lineCents": 12830,
+        "weightKg": 15.700000000000001,
+        "discountRate": 0
+      },
+      {
+        "unitCents": 953,
+        "lineCents": 95300,
+        "weightKg": 66,
+        "discountRate": 0.1
+      },
+      {
+        "unitCents": 3885,
+        "lineCents": 38850,
+        "weightKg": 24.000000000000004,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 146980,
+    "shippingCents": 24000,
+    "totalCents": 170980
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,10 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Quote request
+
+Could you quote this?
+
+20 x gusset, 1.5 mm copper C110, 800 x 250 mm, 4 bends, finish: no finish
+
+Maya Torres
+Harbor Kitchens

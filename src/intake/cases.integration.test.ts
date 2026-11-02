@@ -10,6 +10,7 @@ import type { Catalog, PricingRules } from '../domain/pricing';
 import type { ExtractionResult } from '../extraction/extract';
 import { connectionFrom, createCaseQueue, startCaseWorker } from '../jobs/queue';
 import { localStorage } from '../storage/index';
+import { monthlySpendUsd } from '../usage/index';
 import {
   createTenant,
   getCase,
@@ -33,7 +34,7 @@ const unique = () => Buffer.from(`${REQUEST} Ref ${randomUUID()}`);
 
 // A stand-in for the model, so these tests are free and repeatable.
 const extract = async (): Promise<ExtractionResult> => ({
-  model: 'test-model',
+  model: 'claude-haiku-5-5',
   usage: { inputTokens: 100, outputTokens: 50 },
   extraction: {
     customer: { name: null, company: null, email: null },
@@ -274,6 +275,44 @@ describe('processing', () => {
     );
     await processCase(pipeline(), { tenantId: other, caseId });
     expect((await getCase(db, tenantId, caseId))?.status).toBe('received');
+  });
+
+  it('counts every model call, including retries, toward the monthly limit', async () => {
+    const business = await createTenant(db, 'Budget Business');
+    const { caseId } = await receiveRequest(
+      { db, storage, enqueue: noQueue },
+      { tenantId: business, filename: 'a.txt', bytes: unique() },
+    );
+    const paid = async () => ({ ...(await extract()), model: 'claude-haiku-5-5' });
+    await processCase(pipeline({ extract: paid }), { tenantId: business, caseId });
+    await db.query("UPDATE quote_cases SET status = 'processing' WHERE id = $1", [caseId]);
+    await processCase(pipeline({ extract: paid }), { tenantId: business, caseId });
+    expect(await monthlySpendUsd(db, business)).toBeCloseTo((2 * (100 * 0.1 + 50 * 0.5)) / 1_000_000, 8);
+  });
+
+  it('stops at the spending limit without calling the model, and reports why', async () => {
+    const business = await createTenant(db, 'Capped Business');
+    const options = { connection: connectionFrom(REDIS_URL), prefix: `test-${randomUUID()}`, backoffMs: 20 };
+    const { queue, enqueue } = createCaseQueue(options);
+    const model = vi.fn(extract);
+    const worker = startCaseWorker(pipeline({ extract: model, monthlyBudgetUsd: 0 }), options);
+
+    try {
+      const { caseId } = await receiveRequest(
+        { db, storage, enqueue },
+        { tenantId: business, filename: 'a.txt', bytes: unique() },
+      );
+      await vi.waitFor(
+        async () => expect((await getCase(db, business, caseId))?.status).toBe('failed'),
+        { timeout: 15_000, interval: 50 },
+      );
+      expect(model).not.toHaveBeenCalled();
+      expect((await getCase(db, business, caseId))?.failureReason).toContain('monthly AI spending limit');
+    } finally {
+      await worker.close();
+      await queue.obliterate({ force: true });
+      await queue.close();
+    }
   });
 
   it('moves a request from upload to review through the real queue', async () => {

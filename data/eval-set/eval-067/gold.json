@@ -1,0 +1,49 @@
+{
+  "id": "eval-067",
+  "kind": "pdf",
+  "split": "test",
+  "source": "request.pdf",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 150,
+      "heightMm": 200,
+      "quantity": 100,
+      "bends": 1,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "enclosure panel",
+      "materialCode": "AL5052",
+      "thicknessMm": 5,
+      "widthMm": 100,
+      "heightMm": 550,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 752,
+        "lineCents": 75200,
+        "weightKg": 48.00000000000001,
+        "discountRate": 0.1
+      },
+      {
+        "unitCents": 1040,
+        "lineCents": 41600,
+        "weightKg": 29.480000000000004,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 116800,
+    "shippingCents": 9500,
+    "totalCents": 126300
+  },
+  "containsInjection": false
+}

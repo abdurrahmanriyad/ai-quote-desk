@@ -22,6 +22,7 @@ const worker = startCaseWorker(
     storage,
     catalog,
     rules,
+    monthlyBudgetUsd: Number(process.env.MONTHLY_BUDGET_USD ?? 5),
     extract: (mediaType, bytes) =>
       extractRequest(client, { model, content: requestContent(mediaType, bytes) }),
   },

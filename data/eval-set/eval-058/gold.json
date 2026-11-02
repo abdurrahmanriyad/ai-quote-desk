@@ -1,0 +1,25 @@
+{
+  "id": "eval-058",
+  "kind": "conflict",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 350,
+      "heightMm": 250,
+      "quantity": null,
+      "bends": 4,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

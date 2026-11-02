@@ -1,0 +1,25 @@
+{
+  "id": "eval-059",
+  "kind": "conflict",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "AL5052",
+      "thicknessMm": null,
+      "widthMm": 150,
+      "heightMm": 400,
+      "quantity": 25,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: thickness is missing"
+    ]
+  },
+  "containsInjection": false
+}

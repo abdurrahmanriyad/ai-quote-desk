@@ -1,0 +1,8 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Hello
+
+Thanks for your help on the last order, the team was very happy with it.
+
+Maya Torres
+Harbor Kitchens

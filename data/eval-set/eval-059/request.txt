@@ -1,0 +1,8 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Quote, 2 mm
+
+Subject says 2 mm but the drawing says 3 mm and I can't tell which is right yet. cover plate: cover plate, aluminum 5052, 150 x 400 mm, 4 bends, finish: zinc plate, qty 25.
+
+Grace Lindqvist
+Fjord Marine Parts

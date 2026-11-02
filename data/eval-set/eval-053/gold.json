@@ -1,0 +1,25 @@
+{
+  "id": "eval-053",
+  "kind": "conflict",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cable tray",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": 500,
+      "heightMm": 350,
+      "quantity": null,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

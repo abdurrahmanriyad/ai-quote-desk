@@ -1,0 +1,33 @@
+{
+  "id": "eval-004",
+  "kind": "typos",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 700,
+      "heightMm": 400,
+      "quantity": 10,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 3550,
+        "lineCents": 35500,
+        "weightKg": 43.96000000000001,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 35500,
+    "shippingCents": 9500,
+    "totalCents": 45000
+  },
+  "containsInjection": false
+}

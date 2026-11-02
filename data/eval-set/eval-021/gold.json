@@ -1,0 +1,33 @@
+{
+  "id": "eval-021",
+  "kind": "inches",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 609.6,
+      "heightMm": 304.8,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1867,
+        "lineCents": 93350,
+        "weightKg": 24.89801472,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 93350,
+    "shippingCents": 3500,
+    "totalCents": 96850
+  },
+  "containsInjection": false
+}

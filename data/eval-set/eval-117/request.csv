@@ -1,0 +1,14 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: Parts list
+
+Export from our system attached.
+
+Daniel Okafor
+Ridgeway Controls
+
+--- attachment: parts.csv ---
+qty;item;h_mm;w_mm;coating;folds;gauge_mm;alloy
+25;shelf;300;600;powder coat;1;1.5;stainless steel 304
+50;base plate;300;550;no finish;0;1.5;stainless steel 304
+25;gusset;350;500;no finish;0;3;aluminum 5052

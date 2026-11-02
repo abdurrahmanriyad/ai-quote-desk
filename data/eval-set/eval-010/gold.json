@@ -1,0 +1,33 @@
+{
+  "id": "eval-010",
+  "kind": "typos",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 200,
+      "heightMm": 500,
+      "quantity": 25,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1533,
+        "lineCents": 38325,
+        "weightKg": 39.25,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 38325,
+    "shippingCents": 9500,
+    "totalCents": 47825
+  },
+  "containsInjection": false
+}

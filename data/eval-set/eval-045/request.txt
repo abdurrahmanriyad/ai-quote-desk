@@ -1,0 +1,13 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Re: RFQ mounting bracket
+
+Update after talking to the shop floor: drop the enclosure panel completely, and we need 100 of the mounting bracket, not 50. Everything else stays as below.
+
+On Monday I wrote:
+> 50 x mounting bracket, 3 mm mild steel, 600 x 250 mm, 2 bends, finish: no finish
+> 40 x cover plate, 2 mm stainless steel 304, 500 x 350 mm, 4 bends, finish: no finish
+> 40 x enclosure panel, 2 mm stainless steel 304, 650 x 250 mm, 2 bends, finish: no finish
+
+Grace Lindqvist
+Fjord Marine Parts

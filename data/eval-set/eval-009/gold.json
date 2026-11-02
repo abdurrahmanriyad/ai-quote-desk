@@ -1,0 +1,33 @@
+{
+  "id": "eval-009",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 3,
+      "widthMm": 650,
+      "heightMm": 400,
+      "quantity": 20,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 3311,
+        "lineCents": 66220,
+        "weightKg": 122.46000000000002,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 66220,
+    "shippingCents": 24000,
+    "totalCents": 90220
+  },
+  "containsInjection": false
+}

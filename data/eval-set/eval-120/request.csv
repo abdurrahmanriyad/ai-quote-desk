@@ -1,0 +1,14 @@
+From: Hana Sato <hana@lumenenclosures.example>
+To: quotes@northline.example
+Subject: Parts list
+
+Export from our system attached.
+
+Hana Sato
+Lumen Enclosures
+
+--- attachment: parts.csv ---
+qty;item;h_mm;w_mm;coating;folds;gauge_mm;alloy
+10;mounting bracket;400;650;powder coat;2;2;stainless steel 304
+50;cover plate;200;200;zinc plate;0;5;mild steel
+40;enclosure panel;450;650;no finish;1;1.5;aluminum 5052

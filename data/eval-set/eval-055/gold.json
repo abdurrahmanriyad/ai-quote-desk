@@ -1,0 +1,25 @@
+{
+  "id": "eval-055",
+  "kind": "conflict",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "mounting bracket",
+      "materialCode": "MS",
+      "thicknessMm": 6,
+      "widthMm": 100,
+      "heightMm": 500,
+      "quantity": null,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

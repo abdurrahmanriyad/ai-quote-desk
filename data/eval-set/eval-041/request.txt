@@ -1,0 +1,13 @@
+From: Hana Sato <hana@lumenenclosures.example>
+To: quotes@northline.example
+Subject: Re: RFQ base plate
+
+Update after talking to the shop floor: drop the access door completely, and we need 50 of the base plate, not 40. Everything else stays as below.
+
+On Monday I wrote:
+> 40 x base plate, 2 mm stainless steel 304, 250 x 250 mm, 1 bends, finish: zinc plate
+> 50 x gusset, 1.5 mm stainless steel 304, 250 x 350 mm, 4 bends, finish: no finish
+> 50 x access door, 3 mm aluminum 5052, 350 x 300 mm, no bends, finish: powder coat
+
+Hana Sato
+Lumen Enclosures

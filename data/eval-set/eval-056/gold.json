@@ -1,0 +1,25 @@
+{
+  "id": "eval-056",
+  "kind": "conflict",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": "SS304",
+      "thicknessMm": null,
+      "widthMm": 450,
+      "heightMm": 350,
+      "quantity": 100,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: thickness is missing"
+    ]
+  },
+  "containsInjection": false
+}

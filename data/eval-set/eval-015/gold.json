@@ -1,0 +1,33 @@
+{
+  "id": "eval-015",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": "SS304",
+      "thicknessMm": 1,
+      "widthMm": 100,
+      "heightMm": 100,
+      "quantity": 40,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 811,
+        "lineCents": 32440,
+        "weightKg": 3.2,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 32440,
+    "shippingCents": 3500,
+    "totalCents": 35940
+  },
+  "containsInjection": false
+}

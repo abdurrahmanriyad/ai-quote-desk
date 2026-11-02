@@ -4,6 +4,7 @@
       "code": "MS",
       "name": "Mild steel",
       "aliases": ["mild steel", "steel", "cold rolled", "CRS", "A36"],
+      "assumedAliases": ["steel"],
       "densityKgPerM3": 7850,
       "costCentsPerKg": 140,
       "thicknessesMm": [1, 1.5, 2, 3, 5, 6],

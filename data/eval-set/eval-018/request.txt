@@ -1,0 +1,10 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+100 x base plate, 2 mm stainless steel 304, 10" x 9", 0 bends, finish: no finish
+
+Maya Torres
+Harbor Kitchens

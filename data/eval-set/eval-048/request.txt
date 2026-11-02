@@ -1,0 +1,13 @@
+From: Tom Becker <tom@beckermachine.example>
+To: quotes@northline.example
+Subject: Re: RFQ enclosure panel
+
+Update after talking to the shop floor: drop the base plate completely, and we need 100 of the enclosure panel, not 50. Everything else stays as below.
+
+On Monday I wrote:
+> 50 x enclosure panel, 1.5 mm aluminum 5052, 500 x 550 mm, 1 bends, finish: no finish
+> 25 x shelf, 2 mm aluminum 5052, 200 x 550 mm, 1 bends, finish: no finish
+> 25 x base plate, 6 mm mild steel, 600 x 400 mm, 4 bends, finish: zinc plate
+
+Tom Becker
+Becker Machine Works

@@ -1,0 +1,25 @@
+{
+  "id": "eval-102",
+  "kind": "unknown",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": null,
+      "thicknessMm": 1,
+      "widthMm": 200,
+      "heightMm": 400,
+      "quantity": 20,
+      "bends": 0,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

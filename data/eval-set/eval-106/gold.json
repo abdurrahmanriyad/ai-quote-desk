@@ -1,0 +1,25 @@
+{
+  "id": "eval-106",
+  "kind": "unknown",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": null,
+      "thicknessMm": 3,
+      "widthMm": 500,
+      "heightMm": 350,
+      "quantity": 25,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": "eval-024",
+  "kind": "inches",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 457.2,
+      "heightMm": 304.8,
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1068,
+        "lineCents": 106800,
+        "weightKg": 218.78665919999997,
+        "discountRate": 0.1
+      }
+    ],
+    "subtotalCents": 106800,
+    "shippingCents": 24000,
+    "totalCents": 130800
+  },
+  "containsInjection": false
+}

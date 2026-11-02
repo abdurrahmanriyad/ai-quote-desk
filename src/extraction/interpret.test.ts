@@ -28,20 +28,53 @@ const extraction = (lines: RequestedLine[]): Extraction => ({
 });
 
 describe('matchCatalog', () => {
-  it('prefers the most specific alias', () => {
-    expect(matchCatalog('stainless steel', catalog.materials)).toBe('SS304');
-    expect(matchCatalog('Mild Steel', catalog.materials)).toBe('MS');
-    expect(matchCatalog('5052 aluminium', catalog.materials)).toBe('AL5052');
+  const code = (text: string | null, entries: Parameters<typeof matchCatalog>[1] = catalog.materials) =>
+    matchCatalog(text, entries).code;
+
+  it('prefers the most specific name', () => {
+    expect(code('stainless steel')).toBe('SS304');
+    expect(code('Mild Steel')).toBe('MS');
+    expect(code('5052 aluminium')).toBe('AL5052');
   });
 
   it('matches whole words only', () => {
-    expect(matchCatalog('rawhide', catalog.finishes)).toBeNull();
-    expect(matchCatalog('steelish', catalog.materials)).toBeNull();
+    expect(code('rawhide', catalog.finishes)).toBeNull();
+    expect(code('steelish')).toBeNull();
   });
 
   it('leaves unknown and missing values empty', () => {
-    expect(matchCatalog('titanium', catalog.materials)).toBeNull();
-    expect(matchCatalog(null, catalog.materials)).toBeNull();
+    expect(code('titanium')).toBeNull();
+    expect(code('brass')).toBeNull();
+    expect(code(null)).toBeNull();
+  });
+
+  it('never turns a misspelled stainless into mild steel', () => {
+    expect(matchCatalog('stainles steel', catalog.materials)).toEqual({
+      code: 'SS304',
+      note: 'Read "stainles steel" as Stainless steel 304',
+    });
+  });
+
+  it('fixes close misspellings, and tells the reviewer', () => {
+    expect(matchCatalog('aluminun', catalog.materials).code).toBe('AL5052');
+    expect(matchCatalog('powdercote', catalog.finishes).code).toBe('POWDER');
+    expect(matchCatalog('mild steal', catalog.materials).note).toContain('Mild steel');
+  });
+
+  it('does not guess at short words', () => {
+    expect(code('ram', catalog.finishes)).toBeNull();
+    expect(code('alo')).toBeNull();
+  });
+
+  it('flags the vague word "steel" as an assumption', () => {
+    expect(matchCatalog('steel', catalog.materials)).toEqual({
+      code: 'MS',
+      note: 'Assumed "steel" means Mild steel',
+    });
+  });
+
+  it('adds no note for an exact name', () => {
+    expect(matchCatalog('mild steel', catalog.materials).note).toBeNull();
   });
 });
 

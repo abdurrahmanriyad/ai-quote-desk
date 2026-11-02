@@ -1,0 +1,10 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: Quote request
+
+Could you quote this?
+
+25 x shelf, 3 mm brass, 500 x 350 mm, 4 bends, finish: zinc plate
+
+Daniel Okafor
+Ridgeway Controls

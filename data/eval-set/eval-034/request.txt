@@ -1,0 +1,12 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: RFQ
+
+Parts below. Note the column order.
+
+FINISH        | BENDS | QTY | H MM | W MM | THK | MATERIAL              | PART
+powder coat   | 2     | 100 | 350  | 600  | 1   | mild steel            | gusset
+powder coat   | 2     | 100 | 350  | 100  | 1.5 | stainless steel 304   | access door
+
+Maya Torres
+Harbor Kitchens

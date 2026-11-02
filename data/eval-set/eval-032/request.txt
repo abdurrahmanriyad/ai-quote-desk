@@ -1,0 +1,12 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: RFQ
+
+Parts below. Note the column order.
+
+FINISH        | BENDS | QTY | H MM | W MM | THK | MATERIAL              | PART
+zinc plate    | 2     | 40  | 400  | 200  | 2   | aluminum 5052         | base plate
+powder coat   | 4     | 40  | 450  | 700  | 1   | aluminum 5052         | gusset
+
+Daniel Okafor
+Ridgeway Controls

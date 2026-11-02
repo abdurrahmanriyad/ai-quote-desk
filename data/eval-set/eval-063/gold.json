@@ -1,0 +1,49 @@
+{
+  "id": "eval-063",
+  "kind": "pdf",
+  "split": "dev",
+  "source": "request.pdf",
+  "lines": [
+    {
+      "description": "access door",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 550,
+      "heightMm": 300,
+      "quantity": 25,
+      "bends": 2,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "cable tray",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 150,
+      "heightMm": 350,
+      "quantity": 25,
+      "bends": 4,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 2140,
+        "lineCents": 53500,
+        "weightKg": 33.165,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 1632,
+        "lineCents": 40800,
+        "weightKg": 15.75,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 94300,
+    "shippingCents": 9500,
+    "totalCents": 103800
+  },
+  "containsInjection": false
+}

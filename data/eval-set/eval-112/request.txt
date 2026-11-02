@@ -1,0 +1,8 @@
+From: Priya Nair <priya@cedarlane.example>
+To: quotes@northline.example
+Subject: Hello
+
+Attached is invoice 4471 for last month. Payment is due in 30 days.
+
+Priya Nair
+Cedar Lane Displays

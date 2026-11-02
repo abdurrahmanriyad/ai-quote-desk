@@ -1,0 +1,13 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Re: RFQ mounting bracket
+
+Update after talking to the shop floor: drop the enclosure panel completely, and we need 50 of the mounting bracket, not 25. Everything else stays as below.
+
+On Monday I wrote:
+> 25 x mounting bracket, 3 mm aluminum 5052, 800 x 200 mm, 4 bends, finish: zinc plate
+> 100 x cover plate, 1.5 mm aluminum 5052, 750 x 100 mm, 1 bends, finish: no finish
+> 100 x enclosure panel, 1.5 mm mild steel, 350 x 450 mm, no bends, finish: zinc plate
+
+Maya Torres
+Harbor Kitchens

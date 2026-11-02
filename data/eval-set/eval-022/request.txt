@@ -1,0 +1,11 @@
+From: Priya Nair <priya@cedarlane.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+50 x gusset, 1.5 mm stainless steel 304, 10" x 16", 2 bends, finish: no finish
+100 x access door, 1.5 mm stainless steel 304, 18" x 16", 0 bends, finish: no finish
+
+Priya Nair
+Cedar Lane Displays

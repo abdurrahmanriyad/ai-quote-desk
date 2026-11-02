@@ -1,0 +1,33 @@
+{
+  "id": "eval-011",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 150,
+      "heightMm": 300,
+      "quantity": 20,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 766,
+        "lineCents": 15320,
+        "weightKg": 2.412,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 15320,
+    "shippingCents": 3500,
+    "totalCents": 18820
+  },
+  "containsInjection": false
+}

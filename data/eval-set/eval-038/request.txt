@@ -1,0 +1,13 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Re: RFQ gusset
+
+Update after talking to the shop floor: drop the cable tray completely, and we need 50 of the gusset, not 5. Everything else stays as below.
+
+On Monday I wrote:
+> 5 x gusset, 2 mm mild steel, 800 x 250 mm, no bends, finish: powder coat
+> 50 x access door, 5 mm mild steel, 450 x 150 mm, 1 bends, finish: no finish
+> 100 x cable tray, 1.5 mm stainless steel 304, 350 x 150 mm, 1 bends, finish: powder coat
+
+Maya Torres
+Harbor Kitchens

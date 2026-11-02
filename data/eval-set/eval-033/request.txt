@@ -1,0 +1,12 @@
+From: Hana Sato <hana@lumenenclosures.example>
+To: quotes@northline.example
+Subject: RFQ
+
+Parts below. Note the column order.
+
+FINISH        | BENDS | QTY | H MM | W MM | THK | MATERIAL              | PART
+no finish     | 2     | 20  | 300  | 250  | 2   | mild steel            | cover plate
+powder coat   | 2     | 20  | 500  | 650  | 1.5 | stainless steel 304   | enclosure panel
+
+Hana Sato
+Lumen Enclosures

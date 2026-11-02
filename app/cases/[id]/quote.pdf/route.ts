@@ -1,12 +1,15 @@
-import { catalog, company, context } from '../../../../src/app-context';
+import { catalog, company, context, getViewer } from '../../../../src/app-context';
 import { renderQuotePdf } from '../../../../src/review/quote-pdf';
 import { getApprovedQuote } from '../../../../src/review/review';
 
 /** Only an approved quote can become a PDF. */
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const { db, tenantId } = await context();
-  const quote = await getApprovedQuote(db, tenantId, id).catch(() => null);
+  const viewer = await getViewer();
+  if (!viewer) return new Response('Not found', { status: 404 });
+
+  const { db } = await context();
+  const quote = await getApprovedQuote(db, viewer.tenantId, id).catch(() => null);
   if (!quote) return new Response('Not found', { status: 404 });
 
   const pdf = await renderQuotePdf({ ...quote, company, catalog });

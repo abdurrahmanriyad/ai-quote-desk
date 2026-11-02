@@ -1,0 +1,8 @@
+From: Tom Becker <tom@beckermachine.example>
+To: quotes@northline.example
+Subject: Quote, 2 mm
+
+Subject says 2 mm but the drawing says 3 mm and I can't tell which is right yet. cover plate: cover plate, mild steel, 650 x 200 mm, 2 bends, finish: powder coat, qty 100.
+
+Tom Becker
+Becker Machine Works

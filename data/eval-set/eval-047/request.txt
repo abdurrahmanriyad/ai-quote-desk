@@ -1,0 +1,13 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Re: RFQ cover plate
+
+Update after talking to the shop floor: drop the shelf completely, and we need 50 of the cover plate, not 5. Everything else stays as below.
+
+On Monday I wrote:
+> 5 x cover plate, 2 mm stainless steel 304, 150 x 150 mm, 4 bends, finish: zinc plate
+> 20 x enclosure panel, 3 mm mild steel, 650 x 250 mm, 4 bends, finish: powder coat
+> 25 x shelf, 3 mm mild steel, 350 x 400 mm, 1 bends, finish: no finish
+
+Grace Lindqvist
+Fjord Marine Parts

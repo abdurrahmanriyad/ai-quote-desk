@@ -1,0 +1,11 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+40 x cover plate, 3 mm aluminum 5052, 18" x 9", 0 bends, finish: no finish
+40 x enclosure panel, 1 mm mild steel, 6" x 12", 4 bends, finish: powder coat
+
+Daniel Okafor
+Ridgeway Controls

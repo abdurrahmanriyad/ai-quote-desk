@@ -1,0 +1,25 @@
+{
+  "id": "eval-052",
+  "kind": "conflict",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "access door",
+      "materialCode": "SS304",
+      "thicknessMm": null,
+      "widthMm": 300,
+      "heightMm": 400,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: thickness is missing"
+    ]
+  },
+  "containsInjection": false
+}

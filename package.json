@@ -21,7 +21,10 @@
     "eval": "tsx --env-file=.env scripts/eval.ts",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "eval-set": "tsx scripts/generate-eval-set.ts",
+    "user:create": "tsx scripts/create-user.ts",
+    "demo:seed": "tsx --env-file=.env scripts/seed-demo.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

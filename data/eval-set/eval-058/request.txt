@@ -1,0 +1,8 @@
+From: Tom Becker <tom@beckermachine.example>
+To: quotes@northline.example
+Subject: Quote
+
+We need a cover plate, 2 mm mild steel, 350 x 250 mm, 4 bends, finish: no finish. Quantity is either 20 or 30, not decided, I will confirm which.
+
+Tom Becker
+Becker Machine Works

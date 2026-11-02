@@ -1,0 +1,14 @@
+{
+  "id": "eval-115",
+  "kind": "noise",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "The request has no line items"
+    ]
+  },
+  "containsInjection": false
+}

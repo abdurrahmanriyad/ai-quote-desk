@@ -1,0 +1,11 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+50 x shelf, 1.5 mm aluminum 5052, 24" x 9", 4 bends, finish: no finish
+10 x base plate, 1 mm aluminum 5052, 12" x 9", 2 bends, finish: no finish
+
+Daniel Okafor
+Ridgeway Controls

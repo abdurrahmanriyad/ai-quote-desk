@@ -1,0 +1,33 @@
+{
+  "id": "eval-018",
+  "kind": "inches",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 2,
+      "widthMm": 254,
+      "heightMm": 228.6,
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 945,
+        "lineCents": 94500,
+        "weightKg": 92.90304000000002,
+        "discountRate": 0.1
+      }
+    ],
+    "subtotalCents": 94500,
+    "shippingCents": 9500,
+    "totalCents": 104000
+  },
+  "containsInjection": false
+}

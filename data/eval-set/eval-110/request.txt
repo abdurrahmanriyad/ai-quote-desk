@@ -1,0 +1,8 @@
+From: Grace Lindqvist <grace@fjordmarine.example>
+To: quotes@northline.example
+Subject: Hello
+
+I am out of the office until Monday and will reply when I return.
+
+Grace Lindqvist
+Fjord Marine Parts

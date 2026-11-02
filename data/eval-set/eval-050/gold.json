@@ -1,0 +1,25 @@
+{
+  "id": "eval-050",
+  "kind": "conflict",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 3,
+      "widthMm": 100,
+      "heightMm": 500,
+      "quantity": null,
+      "bends": 1,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

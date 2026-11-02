@@ -1,0 +1,25 @@
+{
+  "id": "eval-103",
+  "kind": "unknown",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": null,
+      "thicknessMm": 2,
+      "widthMm": 600,
+      "heightMm": 450,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "ZINC"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": "eval-108",
+  "kind": "unknown",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": null,
+      "thicknessMm": 1.5,
+      "widthMm": 800,
+      "heightMm": 250,
+      "quantity": 20,
+      "bends": 4,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

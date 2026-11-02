@@ -1,4 +1,5 @@
-import { Queue, Worker, type ConnectionOptions } from 'bullmq';
+import { Queue, UnrecoverableError, Worker, type ConnectionOptions } from 'bullmq';
+import { BudgetExceeded } from '../usage/index';
 import { failCase, processCase, type Enqueue, type Pipeline } from '../intake/cases';
 
 const QUEUE_NAME = 'quote-cases';
@@ -34,14 +35,25 @@ export function createCaseQueue(options: QueueOptions) {
 }
 
 export function startCaseWorker(deps: Pipeline, options: QueueOptions) {
-  const worker = new Worker<CaseJob>(QUEUE_NAME, (job) => processCase(deps, job.data), {
+  const run = async (job: { data: CaseJob }) => {
+    try {
+      await processCase(deps, job.data);
+    } catch (error) {
+      // Retrying won't help, and would only delay telling the reviewer why it stopped.
+      if (error instanceof BudgetExceeded) throw new UnrecoverableError(error.message);
+      throw error;
+    }
+  };
+
+  const worker = new Worker<CaseJob>(QUEUE_NAME, run, {
     connection: options.connection,
     concurrency: 4,
     ...(options.prefix ? { prefix: options.prefix } : {}),
   });
 
   worker.on('failed', (job, error) => {
-    if (job && job.attemptsMade >= (job.opts.attempts ?? 1)) {
+    const finished = job && (job.attemptsMade >= (job.opts.attempts ?? 1) || error instanceof UnrecoverableError);
+    if (finished) {
       failCase(deps.db, job.data, error.message).catch(console.error);
     }
   });

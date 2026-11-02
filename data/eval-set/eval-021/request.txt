@@ -1,0 +1,10 @@
+From: Priya Nair <priya@cedarlane.example>
+To: quotes@northline.example
+Subject: US drawing sizes
+
+Dimensions are in inches.
+
+50 x cover plate, 1 mm aluminum 5052, 24" x 12", 4 bends, finish: powder coat
+
+Priya Nair
+Cedar Lane Displays

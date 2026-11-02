@@ -1,0 +1,25 @@
+{
+  "id": "eval-051",
+  "kind": "conflict",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "access door",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": 350,
+      "heightMm": 550,
+      "quantity": null,
+      "bends": 4,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: quantity is missing"
+    ]
+  },
+  "containsInjection": false
+}

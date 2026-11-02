@@ -1,0 +1,13 @@
+From: Maya Torres <maya@harborkitchens.example>
+To: quotes@northline.example
+Subject: Re: RFQ enclosure panel
+
+Update after talking to the shop floor: drop the base plate completely, and we need 50 of the enclosure panel, not 10. Everything else stays as below.
+
+On Monday I wrote:
+> 10 x enclosure panel, 1 mm stainless steel 304, 700 x 550 mm, 2 bends, finish: zinc plate
+> 5 x shelf, 1.5 mm stainless steel 304, 450 x 500 mm, no bends, finish: powder coat
+> 10 x base plate, 1.5 mm stainless steel 304, 100 x 300 mm, no bends, finish: zinc plate
+
+Maya Torres
+Harbor Kitchens

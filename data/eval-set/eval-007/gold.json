@@ -1,0 +1,33 @@
+{
+  "id": "eval-007",
+  "kind": "typos",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 550,
+      "heightMm": 300,
+      "quantity": 40,
+      "bends": 4,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1137,
+        "lineCents": 45480,
+        "weightKg": 17.688,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 45480,
+    "shippingCents": 3500,
+    "totalCents": 48980
+  },
+  "containsInjection": false
+}

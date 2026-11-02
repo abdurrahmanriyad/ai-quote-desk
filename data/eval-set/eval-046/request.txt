@@ -1,0 +1,13 @@
+From: Priya Nair <priya@cedarlane.example>
+To: quotes@northline.example
+Subject: Re: RFQ shelf
+
+Update after talking to the shop floor: drop the gusset completely, and we need 50 of the shelf, not 25. Everything else stays as below.
+
+On Monday I wrote:
+> 25 x shelf, 1.5 mm stainless steel 304, 250 x 100 mm, no bends, finish: powder coat
+> 25 x base plate, 5 mm aluminum 5052, 300 x 300 mm, 1 bends, finish: zinc plate
+> 40 x gusset, 2 mm mild steel, 100 x 150 mm, no bends, finish: zinc plate
+
+Priya Nair
+Cedar Lane Displays

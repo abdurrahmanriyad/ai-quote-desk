@@ -1,0 +1,33 @@
+{
+  "id": "eval-014",
+  "kind": "typos",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 1,
+      "widthMm": 750,
+      "heightMm": 400,
+      "quantity": 10,
+      "bends": 2,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 4607,
+        "lineCents": 46070,
+        "weightKg": 24,
+        "discountRate": 0
+      }
+    ],
+    "subtotalCents": 46070,
+    "shippingCents": 3500,
+    "totalCents": 49570
+  },
+  "containsInjection": false
+}

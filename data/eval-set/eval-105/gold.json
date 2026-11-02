@@ -1,0 +1,25 @@
+{
+  "id": "eval-105",
+  "kind": "unknown",
+  "split": "dev",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cover plate",
+      "materialCode": null,
+      "thicknessMm": 6,
+      "widthMm": 700,
+      "heightMm": 550,
+      "quantity": 25,
+      "bends": 0,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": false,
+    "problems": [
+      "Line 1: material is missing"
+    ]
+  },
+  "containsInjection": false
+}

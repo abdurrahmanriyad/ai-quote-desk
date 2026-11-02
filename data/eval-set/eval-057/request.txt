@@ -1,0 +1,8 @@
+From: Daniel Okafor <daniel@ridgewaycontrols.example>
+To: quotes@northline.example
+Subject: Quote
+
+We need a gusset, 1.5 mm aluminum 5052, 450 x 550 mm, 4 bends, finish: zinc plate. Quantity is either 20 or 30, not decided, I will confirm which.
+
+Daniel Okafor
+Ridgeway Controls

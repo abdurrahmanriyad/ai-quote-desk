@@ -1,0 +1,49 @@
+{
+  "id": "eval-023",
+  "kind": "inches",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "cable tray",
+      "materialCode": "AL5052",
+      "thicknessMm": 1,
+      "widthMm": 152.4,
+      "heightMm": 304.8,
+      "quantity": 20,
+      "bends": 4,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "mounting bracket",
+      "materialCode": "AL5052",
+      "thicknessMm": 2,
+      "widthMm": 609.6,
+      "heightMm": 304.8,
+      "quantity": 100,
+      "bends": 1,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1027,
+        "lineCents": 20540,
+        "weightKg": 2.489801472,
+        "discountRate": 0
+      },
+      {
+        "unitCents": 1048,
+        "lineCents": 104800,
+        "weightKg": 99.59205888,
+        "discountRate": 0.1
+      }
+    ],
+    "subtotalCents": 125340,
+    "shippingCents": 24000,
+    "totalCents": 149340
+  },
+  "containsInjection": false
+}

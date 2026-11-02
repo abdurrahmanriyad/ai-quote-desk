@@ -1,0 +1,49 @@
+{
+  "id": "eval-034",
+  "kind": "table",
+  "split": "test",
+  "source": "request.txt",
+  "lines": [
+    {
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 1,
+      "widthMm": 600,
+      "heightMm": 350,
+      "quantity": 100,
+      "bends": 2,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "access door",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 100,
+      "heightMm": 350,
+      "quantity": 100,
+      "bends": 2,
+      "finishCode": "POWDER"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1590,
+        "lineCents": 159000,
+        "weightKg": 164.85,
+        "discountRate": 0.1
+      },
+      {
+        "unitCents": 899,
+        "lineCents": 89900,
+        "weightKg": 42.00000000000001,
+        "discountRate": 0.1
+      }
+    ],
+    "subtotalCents": 248900,
+    "shippingCents": 24000,
+    "totalCents": 272900
+  },
+  "containsInjection": false
+}

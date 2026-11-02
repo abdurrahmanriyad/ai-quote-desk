@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { uploadRequest } from './actions';
-import { context } from '../src/app-context';
+import { context, requireViewer } from '../src/app-context';
 import { listCases } from '../src/review/review';
 import { money } from '../src/review/quote-pdf';
 
@@ -16,7 +16,8 @@ const LABELS = {
 
 export default async function Inbox({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const { error } = await searchParams;
-  const { db, tenantId } = await context();
+  const { tenantId, canEdit } = await requireViewer();
+  const { db } = await context();
   const cases = await listCases(db, tenantId);
   const working = cases.some((item) => item.status === 'received' || item.status === 'processing');
 
@@ -28,10 +29,12 @@ export default async function Inbox({ searchParams }: { searchParams: Promise<{ 
           <h1>Quote requests</h1>
           <p className="muted">Every draft waits here until a person approves it.</p>
         </div>
-        <form action={uploadRequest} className="upload">
-          <input type="file" name="file" aria-label="Quote request file" accept=".txt,.eml,.csv,.pdf,.png,.jpg,.jpeg" required />
-          <button>Add request</button>
-        </form>
+        {canEdit && (
+          <form action={uploadRequest} className="upload">
+            <input type="file" name="file" aria-label="Quote request file" accept=".txt,.eml,.csv,.pdf,.png,.jpg,.jpeg" required />
+            <button>Add request</button>
+          </form>
+        )}
       </div>
       {error && <p className="alert" role="alert">{error}</p>}
 

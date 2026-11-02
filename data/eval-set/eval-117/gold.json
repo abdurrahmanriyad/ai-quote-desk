@@ -1,0 +1,65 @@
+{
+  "id": "eval-117",
+  "kind": "csv",
+  "split": "test",
+  "source": "request.csv",
+  "lines": [
+    {
+      "description": "shelf",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 600,
+      "heightMm": 300,
+      "quantity": 25,
+      "bends": 1,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 550,
+      "heightMm": 300,
+      "quantity": 50,
+      "bends": 0,
+      "finishCode": "NONE"
+    },
+    {
+      "description": "gusset",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 500,
+      "heightMm": 350,
+      "quantity": 25,
+      "bends": 0,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 3143,
+        "lineCents": 78575,
+        "weightKg": 54,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 2049,
+        "lineCents": 102450,
+        "weightKg": 99,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 1463,
+        "lineCents": 36575,
+        "weightKg": 35.175,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 217600,
+    "shippingCents": 24000,
+    "totalCents": 241600
+  },
+  "containsInjection": false
+}

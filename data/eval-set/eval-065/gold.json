@@ -1,0 +1,65 @@
+{
+  "id": "eval-065",
+  "kind": "pdf",
+  "split": "test",
+  "source": "request.pdf",
+  "lines": [
+    {
+      "description": "enclosure panel",
+      "materialCode": "AL5052",
+      "thicknessMm": 3,
+      "widthMm": 500,
+      "heightMm": 200,
+      "quantity": 25,
+      "bends": 1,
+      "finishCode": "ZINC"
+    },
+    {
+      "description": "shelf",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 400,
+      "heightMm": 200,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 550,
+      "heightMm": 350,
+      "quantity": 50,
+      "bends": 2,
+      "finishCode": "NONE"
+    }
+  ],
+  "expected": {
+    "ok": true,
+    "lines": [
+      {
+        "unitCents": 1403,
+        "lineCents": 35075,
+        "weightKg": 20.1,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 1920,
+        "lineCents": 96000,
+        "weightKg": 48.00000000000001,
+        "discountRate": 0.05
+      },
+      {
+        "unitCents": 2221,
+        "lineCents": 111050,
+        "weightKg": 377.78125,
+        "discountRate": 0.05
+      }
+    ],
+    "subtotalCents": 242125,
+    "shippingCents": 24000,
+    "totalCents": 266125
+  },
+  "containsInjection": false
+}
