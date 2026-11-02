@@ -6,6 +6,10 @@ Businesses that quote custom work often receive requests as emails, PDFs and spr
 
 **Status:** early development. The core flow works locally: upload a request, review the AI draft beside its source, correct it, approve it and download the quote. Sign-in, business separation, spending limits and a read-only demo mode work too. Email sending, `.xlsx` files and hosted deployment are not built yet.
 
+![AI Quote Desk: reviewing a draft, fixing a missing detail and approving the quote](docs/demo.gif)
+
+[Watch the MP4](docs/demo.mp4). This walkthrough uses real extraction on synthetic demo data.
+
 ## What exists today
 
 - A fictional demo company, Northline Fabrication, with a sample catalog and pricing rules
