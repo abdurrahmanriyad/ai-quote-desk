@@ -1,7 +1,11 @@
-import { connect } from '../src/db/index.js';
-import { recoverStuckCases } from '../src/intake/cases.js';
-import { connectionFrom, createCaseQueue, startCaseWorker } from '../src/jobs/queue.js';
-import { localStorage } from '../src/storage/index.js';
+import Anthropic from '@anthropic-ai/sdk';
+import catalog from '../data/demo-company/catalog.json' with { type: 'json' };
+import rules from '../data/demo-company/pricing.json' with { type: 'json' };
+import { connect } from '../src/db/index';
+import { extractRequest, requestContent } from '../src/extraction/extract';
+import { recoverStuckCases } from '../src/intake/cases';
+import { connectionFrom, createCaseQueue, startCaseWorker } from '../src/jobs/queue';
+import { localStorage } from '../src/storage/index';
 
 const RECOVERY_INTERVAL_MS = 60_000;
 const STUCK_AFTER_MS = 5 * 60_000;
@@ -10,7 +14,19 @@ const db = connect();
 const storage = localStorage(process.env.STORAGE_DIR ?? '.data/files');
 const options = { connection: connectionFrom() };
 const { queue, enqueue } = createCaseQueue(options);
-const worker = startCaseWorker({ db, storage }, options);
+const client = new Anthropic();
+const model = process.env.EXTRACTION_MODEL ?? 'claude-haiku-5-5';
+const worker = startCaseWorker(
+  {
+    db,
+    storage,
+    catalog,
+    rules,
+    extract: (mediaType, bytes) =>
+      extractRequest(client, { model, content: requestContent(mediaType, bytes) }),
+  },
+  options,
+);
 
 const recovery = setInterval(() => {
   recoverStuckCases({ db, enqueue }, STUCK_AFTER_MS).catch(console.error);

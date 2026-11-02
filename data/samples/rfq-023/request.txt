@@ -6,8 +6,8 @@ Hi team,
 
 Could you quote the following?
 
-- 500 x mounting bracket, mild steel, 700 x 250 mm, 2 bends, finish: powder coated
-- 10 x enclosure panel, 1.5 mm cold rolled, 350 x 650 mm, flat, no bends, finish: galvanized plating
+- 50 x mounting bracket, steel, 350 x 700 mm, flat, no bends, finish: as cut
+- 20 x cover plate, 1.5 mm 304 stainless, 950 x 200 mm, 4 bends, finish: none
 
 Tom Becker
 Becker Machine Works

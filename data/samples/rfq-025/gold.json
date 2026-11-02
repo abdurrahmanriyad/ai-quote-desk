@@ -4,30 +4,30 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "gusset",
-      "materialCode": "SS304",
-      "thicknessMm": 1,
-      "widthMm": 700,
-      "heightMm": 400,
-      "quantity": 500,
-      "bends": 0,
-      "finishCode": null
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": null,
+      "widthMm": 550,
+      "heightMm": 700,
+      "quantity": 20,
+      "bends": 2,
+      "finishCode": "ZINC"
     },
     {
-      "description": "gusset",
+      "description": "base plate",
       "materialCode": "AL5052",
-      "thicknessMm": 1,
-      "widthMm": 750,
-      "heightMm": 400,
-      "quantity": 150,
-      "bends": 1,
-      "finishCode": "NONE"
+      "thicknessMm": 3,
+      "widthMm": 550,
+      "heightMm": 650,
+      "quantity": 40,
+      "bends": 0,
+      "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": false,
     "problems": [
-      "Line 1: finish is missing"
+      "Line 1: thickness is missing"
     ]
   },
   "containsInjection": false

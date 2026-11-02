@@ -4,20 +4,21 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "shelf",
-      "materialCode": "AL5052",
-      "thicknessMm": 2,
-      "widthMm": 800,
-      "heightMm": 200,
-      "quantity": null,
-      "bends": 0,
+      "description": "gusset",
+      "materialCode": "SS304",
+      "thicknessMm": 3,
+      "widthMm": null,
+      "heightMm": null,
+      "quantity": 5,
+      "bends": 2,
       "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": false,
     "problems": [
-      "Line 1: quantity is missing"
+      "Line 1: width is missing",
+      "Line 1: height is missing"
     ]
   },
   "containsInjection": false

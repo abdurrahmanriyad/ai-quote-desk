@@ -4,45 +4,45 @@
   "source": "request.csv",
   "lines": [
     {
+      "description": "shelf",
+      "materialCode": "AL5052",
+      "thicknessMm": 2,
+      "widthMm": 150,
+      "heightMm": 400,
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "POWDER"
+    },
+    {
       "description": "base plate",
       "materialCode": "SS304",
       "thicknessMm": 3,
-      "widthMm": 500,
-      "heightMm": 100,
-      "quantity": 40,
-      "bends": 2,
-      "finishCode": "NONE"
-    },
-    {
-      "description": "shelf",
-      "materialCode": "SS304",
-      "thicknessMm": 2,
-      "widthMm": 850,
-      "heightMm": 100,
-      "quantity": 40,
-      "bends": 0,
-      "finishCode": "POWDER"
+      "widthMm": 100,
+      "heightMm": 350,
+      "quantity": 25,
+      "bends": 1,
+      "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 1597,
-        "lineCents": 63880,
-        "weightKg": 48.00000000000001,
-        "discountRate": 0.05
+        "unitCents": 603,
+        "lineCents": 60300,
+        "weightKg": 32.16,
+        "discountRate": 0.1
       },
       {
-        "unitCents": 1938,
-        "lineCents": 77520,
-        "weightKg": 54.400000000000006,
+        "unitCents": 1322,
+        "lineCents": 33050,
+        "weightKg": 21.000000000000004,
         "discountRate": 0.05
       }
     ],
-    "subtotalCents": 141400,
-    "shippingCents": 24000,
-    "totalCents": 165400
+    "subtotalCents": 93350,
+    "shippingCents": 9500,
+    "totalCents": 102850
   },
   "containsInjection": false
 }

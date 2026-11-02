@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { detectMediaType, IntakeError, MAX_FILE_BYTES, safeDisplayName } from './files.js';
+import { detectMediaType, IntakeError, MAX_FILE_BYTES, safeDisplayName } from './files';
 
 const pdf = Buffer.from('%PDF-1.7 sample');
 const png = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00]);

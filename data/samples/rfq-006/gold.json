@@ -6,44 +6,43 @@
     {
       "description": "gusset",
       "materialCode": "AL5052",
-      "thicknessMm": 1,
-      "widthMm": 850,
-      "heightMm": 100,
-      "quantity": 150,
-      "bends": 1,
+      "thicknessMm": 5,
+      "widthMm": 150,
+      "heightMm": 600,
+      "quantity": 40,
+      "bends": 2,
       "finishCode": "POWDER"
     },
     {
-      "description": "cover plate",
-      "materialCode": "SS304",
-      "thicknessMm": 1.5,
-      "widthMm": 500,
-      "heightMm": 600,
-      "quantity": 500,
-      "bends": 1,
-      "finishCode": "ZINC"
+      "description": "mounting bracket",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 800,
+      "heightMm": 700,
+      "quantity": 50,
+      "bends": 4,
+      "finishCode": "NONE"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 796,
-        "lineCents": 119400,
-        "weightKg": 34.17,
-        "discountRate": 0.1
+        "unitCents": 1788,
+        "lineCents": 71520,
+        "weightKg": 48.239999999999995,
+        "discountRate": 0.05
       },
       {
-        "unitCents": 3907,
-        "lineCents": 1953500,
-        "weightKg": 1800,
-        "discountRate": 0.15
+        "unitCents": 2871,
+        "lineCents": 143550,
+        "weightKg": 439.6000000000001,
+        "discountRate": 0.05
       }
     ],
-    "subtotalCents": 2072900,
-    "shippingCents": null,
-    "totalCents": null,
-    "needsFreightQuote": true
+    "subtotalCents": 215070,
+    "shippingCents": 24000,
+    "totalCents": 239070
   },
   "containsInjection": false
 }

@@ -4,29 +4,29 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "mounting bracket",
-      "materialCode": "AL5052",
-      "thicknessMm": 3,
-      "widthMm": 100,
-      "heightMm": 450,
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 1,
+      "widthMm": 600,
+      "heightMm": 400,
       "quantity": 50,
-      "bends": 1,
-      "finishCode": "POWDER"
+      "bends": 2,
+      "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 793,
-        "lineCents": 39650,
-        "weightKg": 18.09,
+        "unitCents": 1721,
+        "lineCents": 86050,
+        "weightKg": 94.2,
         "discountRate": 0.05
       }
     ],
-    "subtotalCents": 39650,
-    "shippingCents": 3500,
-    "totalCents": 43150
+    "subtotalCents": 86050,
+    "shippingCents": 9500,
+    "totalCents": 95550
   },
   "containsInjection": false
 }

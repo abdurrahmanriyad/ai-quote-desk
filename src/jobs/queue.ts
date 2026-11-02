@@ -1,7 +1,5 @@
 import { Queue, Worker, type ConnectionOptions } from 'bullmq';
-import type { Db } from '../db/index.js';
-import { failCase, processCase, type Enqueue } from '../intake/cases.js';
-import type { Storage } from '../storage/index.js';
+import { failCase, processCase, type Enqueue, type Pipeline } from '../intake/cases';
 
 const QUEUE_NAME = 'quote-cases';
 
@@ -35,7 +33,7 @@ export function createCaseQueue(options: QueueOptions) {
   return { queue, enqueue };
 }
 
-export function startCaseWorker(deps: { db: Db; storage: Storage }, options: QueueOptions) {
+export function startCaseWorker(deps: Pipeline, options: QueueOptions) {
   const worker = new Worker<CaseJob>(QUEUE_NAME, (job) => processCase(deps, job.data), {
     connection: options.connection,
     concurrency: 4,

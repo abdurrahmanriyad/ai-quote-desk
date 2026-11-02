@@ -6,59 +6,59 @@
     {
       "description": "cover plate",
       "materialCode": "MS",
-      "thicknessMm": 2,
-      "widthMm": 250,
-      "heightMm": 350,
-      "quantity": 10,
+      "thicknessMm": 1.5,
+      "widthMm": 500,
+      "heightMm": 150,
+      "quantity": 150,
       "bends": 2,
-      "finishCode": "ZINC"
-    },
-    {
-      "description": "mounting bracket",
-      "materialCode": "MS",
-      "thicknessMm": 2,
-      "widthMm": 100,
-      "heightMm": 400,
-      "quantity": 25,
-      "bends": 1,
       "finishCode": "NONE"
     },
     {
-      "description": "mounting bracket",
+      "description": "enclosure panel",
       "materialCode": "MS",
       "thicknessMm": 1,
-      "widthMm": 550,
-      "heightMm": 450,
-      "quantity": 5,
+      "widthMm": 600,
+      "heightMm": 300,
+      "quantity": 40,
       "bends": 0,
       "finishCode": "NONE"
+    },
+    {
+      "description": "shelf",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 600,
+      "heightMm": 100,
+      "quantity": 10,
+      "bends": 0,
+      "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 1634,
-        "lineCents": 16340,
-        "weightKg": 13.7375,
-        "discountRate": 0
+        "unitCents": 592,
+        "lineCents": 88800,
+        "weightKg": 132.46875,
+        "discountRate": 0.1
       },
       {
-        "unitCents": 617,
-        "lineCents": 15425,
-        "weightKg": 15.7,
+        "unitCents": 665,
+        "lineCents": 26600,
+        "weightKg": 56.519999999999996,
         "discountRate": 0.05
       },
       {
-        "unitCents": 1971,
-        "lineCents": 9855,
-        "weightKg": 9.714375,
+        "unitCents": 1215,
+        "lineCents": 12150,
+        "weightKg": 9.42,
         "discountRate": 0
       }
     ],
-    "subtotalCents": 41620,
-    "shippingCents": 9500,
-    "totalCents": 51120
+    "subtotalCents": 127550,
+    "shippingCents": 24000,
+    "totalCents": 151550
   },
   "containsInjection": false
 }

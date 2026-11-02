@@ -4,29 +4,29 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "mounting bracket",
-      "materialCode": "SS304",
-      "thicknessMm": 1.5,
-      "widthMm": 800,
-      "heightMm": 600,
-      "quantity": 20,
-      "bends": 0,
-      "finishCode": "ZINC"
+      "description": "enclosure panel",
+      "materialCode": "MS",
+      "thicknessMm": 5,
+      "widthMm": 850,
+      "heightMm": 250,
+      "quantity": 10,
+      "bends": 2,
+      "finishCode": "POWDER"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 7306,
-        "lineCents": 146120,
-        "weightKg": 115.19999999999999,
+        "unitCents": 3930,
+        "lineCents": 39300,
+        "weightKg": 83.40625000000001,
         "discountRate": 0
       }
     ],
-    "subtotalCents": 146120,
-    "shippingCents": 24000,
-    "totalCents": 170120
+    "subtotalCents": 39300,
+    "shippingCents": 9500,
+    "totalCents": 48800
   },
   "containsInjection": false
 }

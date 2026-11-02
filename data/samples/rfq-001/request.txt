@@ -2,13 +2,13 @@ From: Luis Romero <luis@summithvac.example>
 To: quotes@northline.example
 Subject: Request for quote
 
-Good morning,
+Hello,
 
 Please quote these parts:
 
-- 25 x base plate, 1 mm stainless steel, 750 x 100 mm, 2 bends, finish: galvanized plating
-- 40 x mounting bracket, 1.5 mm A36, 550 x 300 mm, flat, no bends, finish: powder coat
-- 10 x mounting bracket, 3 mm stainless, 700 x 350 mm, 2 bends, finish: painted
+- 50 x enclosure panel, 3 mm AL5052, 150 x 350 mm, 4 bends, finish: no finish
+- 20 x shelf, 2 mm mild steel, 400 x 400 mm, 1 bend, finish: powder coat
+- 150 x base plate, 3 mm CRS, 500 x 150 mm, 1 bend, finish: galvanized plating
 
 Luis Romero
 Summit HVAC Supply

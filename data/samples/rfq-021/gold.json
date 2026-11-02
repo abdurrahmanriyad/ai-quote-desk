@@ -4,12 +4,12 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "mounting bracket",
+      "description": "cover plate",
       "materialCode": "MS",
-      "thicknessMm": 1.5,
-      "widthMm": null,
-      "heightMm": null,
-      "quantity": 40,
+      "thicknessMm": 3,
+      "widthMm": 250,
+      "heightMm": 400,
+      "quantity": null,
       "bends": 1,
       "finishCode": "POWDER"
     }
@@ -17,8 +17,7 @@
   "expected": {
     "ok": false,
     "problems": [
-      "Line 1: width is missing",
-      "Line 1: height is missing"
+      "Line 1: quantity is missing"
     ]
   },
   "containsInjection": false

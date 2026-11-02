@@ -2,11 +2,11 @@ From: Priya Nair <priya@cedarlanedisplays.example>
 To: quotes@northline.example
 Subject: Quote request
 
-Hello,
+Good morning,
 
 Could you quote the following?
 
-- 40 x mounting bracket, 1.5 mm steel, 1 bend, finish: painted
+- some cover plate, 3 mm A36, 250 x 400 mm, 1 bend, finish: painted
 
 Priya Nair
 Cedar Lane Displays

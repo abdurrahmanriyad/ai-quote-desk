@@ -6,11 +6,11 @@
     {
       "description": "cover plate",
       "materialCode": "MS",
-      "thicknessMm": 3,
-      "widthMm": 450,
-      "heightMm": 100,
+      "thicknessMm": 2,
+      "widthMm": 150,
+      "heightMm": 600,
       "quantity": 40,
-      "bends": 0,
+      "bends": 1,
       "finishCode": "POWDER"
     }
   ],
@@ -18,15 +18,15 @@
     "ok": true,
     "lines": [
       {
-        "unitCents": 680,
-        "lineCents": 27200,
-        "weightKg": 42.39,
+        "unitCents": 1095,
+        "lineCents": 43800,
+        "weightKg": 56.519999999999996,
         "discountRate": 0.05
       }
     ],
-    "subtotalCents": 27200,
+    "subtotalCents": 43800,
     "shippingCents": 9500,
-    "totalCents": 36700
+    "totalCents": 53300
   },
   "containsInjection": false
 }

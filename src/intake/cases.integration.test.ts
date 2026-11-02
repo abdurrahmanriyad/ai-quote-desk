@@ -3,19 +3,24 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
-import { connect, migrate, type Db } from '../db/index.js';
-import { connectionFrom, createCaseQueue, startCaseWorker } from '../jobs/queue.js';
-import { localStorage } from '../storage/index.js';
+import catalogJson from '../../data/demo-company/catalog.json' with { type: 'json' };
+import rulesJson from '../../data/demo-company/pricing.json' with { type: 'json' };
+import { connect, migrate, type Db } from '../db/index';
+import type { Catalog, PricingRules } from '../domain/pricing';
+import type { ExtractionResult } from '../extraction/extract';
+import { connectionFrom, createCaseQueue, startCaseWorker } from '../jobs/queue';
+import { localStorage } from '../storage/index';
 import {
   createTenant,
   getCase,
   getDocuments,
+  getDraft,
   getEvents,
   processCase,
   receiveRequest,
   recoverStuckCases,
   type Enqueue,
-} from './cases.js';
+} from './cases';
 
 const DATABASE_URL = process.env.DATABASE_URL ?? 'postgres://quote:quote@localhost:54329/quote_desk';
 const REDIS_URL = process.env.REDIS_URL ?? 'redis://localhost:63799';
@@ -23,10 +28,45 @@ const REDIS_URL = process.env.REDIS_URL ?? 'redis://localhost:63799';
 const root = mkdtempSync(join(tmpdir(), 'quote-desk-'));
 const storage = localStorage(root);
 const noQueue: Enqueue = async () => {};
-const unique = () => Buffer.from(`Please quote part ${randomUUID()}`);
+const REQUEST = 'Please quote 10 brackets, 2 mm mild steel, 500 x 300 mm, flat, no finish.';
+const unique = () => Buffer.from(`${REQUEST} Ref ${randomUUID()}`);
+
+// A stand-in for the model, so these tests are free and repeatable.
+const extract = async (): Promise<ExtractionResult> => ({
+  model: 'test-model',
+  usage: { inputTokens: 100, outputTokens: 50 },
+  extraction: {
+    customer: { name: null, company: null, email: null },
+    containsInstructionsToSoftware: false,
+    lines: [
+      {
+        description: 'bracket',
+        quantity: 10,
+        material: 'mild steel',
+        thickness: 2,
+        thicknessUnit: 'mm',
+        width: 500,
+        height: 300,
+        sizeUnit: 'mm',
+        bends: 0,
+        finish: 'no finish',
+        evidence: ['10 brackets, 2 mm mild steel, 500 x 300 mm'],
+      },
+    ],
+  },
+});
 
 let db: Db;
 let tenantId: string;
+
+const pipeline = (overrides = {}) => ({
+  db,
+  storage,
+  catalog: catalogJson as Catalog,
+  rules: rulesJson as PricingRules,
+  extract,
+  ...overrides,
+});
 
 const waitForStatus = async (id: string, status: string) =>
   vi.waitFor(
@@ -37,7 +77,7 @@ const waitForStatus = async (id: string, status: string) =>
 beforeAll(async () => {
   db = connect(DATABASE_URL);
   await migrate(db);
-  tenantId = await createTenant(db, 'Northline Fabrication');
+  tenantId = await createTenant(db, 'Test Business');
 });
 
 afterAll(async () => {
@@ -172,12 +212,58 @@ describe('processing', () => {
       { db, storage, enqueue: noQueue },
       { tenantId, filename: 'a.txt', bytes: unique() },
     );
-    await processCase({ db, storage }, { tenantId, caseId });
-    await processCase({ db, storage }, { tenantId, caseId });
+    await processCase(pipeline(), { tenantId, caseId });
+    await processCase(pipeline(), { tenantId, caseId });
 
     expect((await getCase(db, tenantId, caseId))?.status).toBe('needs_review');
     const ready = (await getEvents(db, tenantId, caseId)).filter((event) => event.type === 'case.ready_for_review');
     expect(ready).toHaveLength(1);
+  });
+
+  it('saves a priced draft, and only the owning business can read it', async () => {
+    const { caseId } = await receiveRequest(
+      { db, storage, enqueue: noQueue },
+      { tenantId, filename: 'a.txt', bytes: unique() },
+    );
+    await processCase(pipeline(), { tenantId, caseId });
+
+    const draft = await getDraft(db, tenantId, caseId);
+    expect(draft?.price).toMatchObject({ ok: true });
+    expect(draft?.reviewIssues).toEqual([]);
+    expect(await getDraft(db, await createTenant(db, 'Fifth Business'), caseId)).toBeNull();
+  });
+
+  it('flags bad evidence and injection attempts for the reviewer', async () => {
+    const { caseId } = await receiveRequest(
+      { db, storage, enqueue: noQueue },
+      { tenantId, filename: 'a.txt', bytes: unique() },
+    );
+    const suspicious = async () => {
+      const result = await extract();
+      result.extraction.containsInstructionsToSoftware = true;
+      result.extraction.lines[0]!.evidence = ['not in the request'];
+      return result;
+    };
+    await processCase(pipeline({ extract: suspicious }), { tenantId, caseId });
+
+    expect((await getDraft(db, tenantId, caseId))?.reviewIssues).toEqual([
+      'Line 1: quoted evidence is not in the request',
+      'The request contains text trying to instruct software',
+    ]);
+  });
+
+  it('keeps one draft per case when a job repeats after failing', async () => {
+    const { caseId } = await receiveRequest(
+      { db, storage, enqueue: noQueue },
+      { tenantId, filename: 'a.txt', bytes: unique() },
+    );
+    await db.query("UPDATE quote_cases SET status = 'processing' WHERE id = $1", [caseId]);
+    await processCase(pipeline(), { tenantId, caseId });
+    await db.query("UPDATE quote_cases SET status = 'processing' WHERE id = $1", [caseId]);
+    await processCase(pipeline(), { tenantId, caseId });
+
+    const { rows } = await db.query('SELECT 1 FROM case_drafts WHERE case_id = $1', [caseId]);
+    expect(rows).toHaveLength(1);
   });
 
   it('ignores a job carrying the wrong tenant', async () => {
@@ -186,14 +272,14 @@ describe('processing', () => {
       { db, storage, enqueue: noQueue },
       { tenantId, filename: 'a.txt', bytes: unique() },
     );
-    await processCase({ db, storage }, { tenantId: other, caseId });
+    await processCase(pipeline(), { tenantId: other, caseId });
     expect((await getCase(db, tenantId, caseId))?.status).toBe('received');
   });
 
   it('moves a request from upload to review through the real queue', async () => {
     const options = { connection: connectionFrom(REDIS_URL), prefix: `test-${randomUUID()}`, backoffMs: 20 };
     const { queue, enqueue } = createCaseQueue(options);
-    const worker = startCaseWorker({ db, storage }, options);
+    const worker = startCaseWorker(pipeline(), options);
 
     try {
       const { caseId } = await receiveRequest({ db, storage, enqueue }, { tenantId, filename: 'a.txt', bytes: unique() });
@@ -214,7 +300,7 @@ describe('processing', () => {
         throw new Error('storage unavailable');
       },
     };
-    const worker = startCaseWorker({ db, storage: broken }, options);
+    const worker = startCaseWorker(pipeline({ storage: broken }), options);
 
     try {
       const { caseId } = await receiveRequest({ db, storage, enqueue }, { tenantId, filename: 'a.txt', bytes: unique() });

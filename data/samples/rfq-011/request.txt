@@ -6,7 +6,7 @@ Hello,
 
 Please quote these parts:
 
-- 20 x mounting bracket, 1.5 mm 304, 800 x 600 mm, flat, no bends, finish: zinc
+- 10 x enclosure panel, 5 mm steel, 850 x 250 mm, 2 bends, finish: painted
 
 Priya Nair
 Cedar Lane Displays

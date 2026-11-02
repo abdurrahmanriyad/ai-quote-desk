@@ -2,13 +2,13 @@ From: Grace Lindqvist <grace@fjordmarine.example>
 To: quotes@northline.example
 Subject: Request for quote
 
-Hello,
+Hi team,
 
 Please quote these parts:
 
-- 150 x mounting bracket, 5 mm aluminium, 250 x 700 mm, flat, no bends, finish: galvanized plating
-- 40 x base plate, 1.5 mm stainless, 850 x 600 mm, flat, no bends, finish: no finish
-- 25 x shelf, 5 mm alu, 700 x 550 mm, 1 bend, finish: zinc
+- 25 x base plate, 1.5 mm CRS, 950 x 650 mm, 2 bends, finish: powder coat
+- 25 x gusset, 5 mm AL5052, 800 x 450 mm, flat, no bends, finish: zinc plated
+- 25 x mounting bracket, 2 mm stainless, 800 x 350 mm, 2 bends, finish: powder coat
 
 Grace Lindqvist
 Fjord Marine Parts

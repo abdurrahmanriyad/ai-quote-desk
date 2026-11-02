@@ -5,8 +5,6 @@ import pg from 'pg';
 export type Db = pg.Pool;
 export type Tx = pg.PoolClient;
 
-const MIGRATIONS = join(import.meta.dirname, '../../migrations');
-
 export function connect(url = process.env.DATABASE_URL) {
   if (!url) throw new Error('DATABASE_URL is not set');
   return new pg.Pool({ connectionString: url });
@@ -37,9 +35,10 @@ export async function migrate(db: Db) {
     const { rows } = await tx.query<{ name: string }>('SELECT name FROM schema_migrations');
     const applied = new Set(rows.map((row) => row.name));
 
-    for (const name of readdirSync(MIGRATIONS).sort()) {
+    const folder = join(process.cwd(), 'migrations');
+    for (const name of readdirSync(folder).sort()) {
       if (!name.endsWith('.sql') || applied.has(name)) continue;
-      await tx.query(readFileSync(join(MIGRATIONS, name), 'utf8'));
+      await tx.query(readFileSync(join(folder, name), 'utf8'));
       await tx.query('INSERT INTO schema_migrations (name) VALUES ($1)', [name]);
     }
   });

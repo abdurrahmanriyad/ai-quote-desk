@@ -1,7 +1,16 @@
 import { createHash } from 'node:crypto';
-import { transaction, type Db, type Tx } from '../db/index.js';
-import type { Storage } from '../storage/index.js';
-import { detectMediaType, safeDisplayName } from './files.js';
+import { transaction, type Db, type Tx } from '../db/index';
+import type { Storage } from '../storage/index';
+import {
+  priceQuote,
+  type Catalog,
+  type LineRequest,
+  type PricingRules,
+  type QuotePrice,
+} from '../domain/pricing';
+import type { ExtractionResult } from '../extraction/extract';
+import { interpretLine, verifyEvidence } from '../extraction/interpret';
+import { detectMediaType, safeDisplayName } from './files';
 
 export type CaseStatus = 'received' | 'processing' | 'needs_review' | 'failed';
 
@@ -140,15 +149,22 @@ export async function createTenant(db: Db, name: string) {
   return rows[0]!.id;
 }
 
+export type Pipeline = {
+  db: Db;
+  storage: Storage;
+  catalog: Catalog;
+  rules: PricingRules;
+  extract: (mediaType: string, bytes: Buffer) => Promise<ExtractionResult>;
+};
+
+const TEXT_TYPES = new Set(['text/plain', 'text/csv', 'message/rfc822']);
+
 /**
- * Pipeline step for one case. Safe to run more than once. Extraction joins here
- * in the next milestone; for now it proves the stored file is intact and hands
- * the case to review.
+ * Pipeline step for one case. Safe to run more than once: a retry replaces the
+ * draft. The model reads the request; catalog matching, pricing and verification
+ * are all plain code, and the result always stops at a person.
  */
-export async function processCase(
-  deps: { db: Db; storage: Storage },
-  job: { tenantId: string; caseId: string },
-) {
+export async function processCase(deps: Pipeline, job: { tenantId: string; caseId: string }) {
   const { db, storage } = deps;
   const claimed = await db.query(
     `UPDATE quote_cases SET status = 'processing', updated_at = now()
@@ -159,19 +175,64 @@ export async function processCase(
 
   await recordEvent(db, job.tenantId, job.caseId, 'case.processing');
 
-  for (const document of await getDocuments(db, job.tenantId, job.caseId)) {
-    const bytes = await storage.get(document.storageKey);
-    if (sha256(bytes) !== document.sha256) throw new Error(`Stored file changed: ${document.id}`);
+  const [document] = await getDocuments(db, job.tenantId, job.caseId);
+  if (!document) throw new Error(`Case has no document: ${job.caseId}`);
+
+  const bytes = await storage.get(document.storageKey);
+  if (sha256(bytes) !== document.sha256) throw new Error(`Stored file changed: ${document.id}`);
+
+  const { extraction, usage, model } = await deps.extract(document.mediaType, bytes);
+  const lines = extraction.lines.map((line) => interpretLine(line, deps.catalog));
+  const price = priceQuote(lines, deps.catalog, deps.rules);
+
+  const reviewIssues = TEXT_TYPES.has(document.mediaType)
+    ? verifyEvidence(extraction, bytes.toString('utf8'))
+    : ['Quotes from this file type are not checked automatically yet'];
+  if (extraction.containsInstructionsToSoftware) {
+    reviewIssues.push('The request contains text trying to instruct software');
   }
 
   await transaction(db, async (tx) => {
+    await tx.query(
+      `INSERT INTO case_drafts
+         (case_id, tenant_id, model, extraction, lines, price, review_issues, input_tokens, output_tokens)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       ON CONFLICT (case_id) DO UPDATE SET
+         model = EXCLUDED.model, extraction = EXCLUDED.extraction, lines = EXCLUDED.lines,
+         price = EXCLUDED.price, review_issues = EXCLUDED.review_issues,
+         input_tokens = EXCLUDED.input_tokens, output_tokens = EXCLUDED.output_tokens,
+         created_at = now()`,
+      [
+        job.caseId,
+        job.tenantId,
+        model,
+        JSON.stringify(extraction),
+        JSON.stringify(lines),
+        JSON.stringify(price),
+        JSON.stringify(reviewIssues),
+        usage.inputTokens,
+        usage.outputTokens,
+      ],
+    );
     await tx.query(
       `UPDATE quote_cases SET status = 'needs_review', updated_at = now()
        WHERE id = $1 AND tenant_id = $2`,
       [job.caseId, job.tenantId],
     );
-    await recordEvent(tx, job.tenantId, job.caseId, 'case.ready_for_review');
+    await recordEvent(tx, job.tenantId, job.caseId, 'case.ready_for_review', {
+      model,
+      reviewIssues: reviewIssues.length,
+    });
   });
+}
+
+export async function getDraft(db: Db, tenantId: string, caseId: string) {
+  const { rows } = await db.query<{ price: QuotePrice; review_issues: string[]; lines: LineRequest[] }>(
+    'SELECT price, review_issues, lines FROM case_drafts WHERE case_id = $1 AND tenant_id = $2',
+    [caseId, tenantId],
+  );
+  const row = rows[0];
+  return row ? { price: row.price, reviewIssues: row.review_issues, lines: row.lines } : null;
 }
 
 /** Called once retries run out, so a stuck request is visible instead of silent. */

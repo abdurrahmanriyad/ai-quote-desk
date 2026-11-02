@@ -17,19 +17,31 @@
     "intake": "tsx scripts/intake.ts",
     "worker": "tsx scripts/worker.ts",
     "test:integration": "vitest run --config vitest.integration.config.ts",
-    "verify:full": "npm run verify && npm run db:up && npm run migrate && npm run test:integration"
+    "verify:full": "npm run verify && npm run db:up && npm run migrate && npm run test:integration",
+    "eval": "tsx --env-file=.env scripts/eval.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
     "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.1.0"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
     "bullmq": "^6.5.3",
     "ioredis": "^6.0.0",
-    "pg": "^8.23.1"
+    "next": "^16.4.4",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
   },
   "license": "MIT"
 }

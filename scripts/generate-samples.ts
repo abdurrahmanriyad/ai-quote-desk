@@ -11,7 +11,7 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import catalogJson from '../data/demo-company/catalog.json' with { type: 'json' };
 import rulesJson from '../data/demo-company/pricing.json' with { type: 'json' };
-import { priceQuote, type Catalog, type LineRequest, type PricingRules } from '../src/domain/pricing.js';
+import { priceQuote, type Catalog, type LineRequest, type PricingRules } from '../src/domain/pricing';
 
 const catalog = catalogJson as Catalog;
 const rules = rulesJson as PricingRules;
@@ -117,7 +117,12 @@ ${company}
 function build(kind: SampleKind, sample: Sample) {
   const from = sample.pick(CUSTOMERS);
   const count = kind === 'clean' || kind === 'spreadsheet' ? sample.pick([1, 2, 3]) : sample.pick([1, 2]);
-  const lines: Part[] = Array.from({ length: count }, () => sample.part());
+  // Part names stay unique within a request, or "change the brackets" would be ambiguous.
+  const firstPart = PARTS.indexOf(sample.pick(PARTS));
+  const lines: Part[] = Array.from({ length: count }, (_, index) => ({
+    ...sample.part(),
+    description: PARTS[(firstPart + index) % PARTS.length]!,
+  }));
   const greeting = sample.pick(['Hi team,', 'Hello,', 'Good morning,']);
 
   if (kind === 'spreadsheet') {

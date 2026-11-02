@@ -4,45 +4,45 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "enclosure panel",
-      "materialCode": "AL5052",
-      "thicknessMm": 3,
-      "widthMm": 250,
-      "heightMm": 500,
-      "quantity": 100,
-      "bends": 0,
-      "finishCode": "ZINC"
+      "description": "gusset",
+      "materialCode": "SS304",
+      "thicknessMm": 1,
+      "widthMm": 700,
+      "heightMm": 550,
+      "quantity": 25,
+      "bends": 4,
+      "finishCode": "NONE"
     },
     {
-      "description": "cover plate",
+      "description": "mounting bracket",
       "materialCode": "MS",
-      "thicknessMm": 1,
-      "widthMm": 800,
-      "heightMm": 150,
-      "quantity": 40,
-      "bends": 2,
-      "finishCode": "NONE"
+      "thicknessMm": 5,
+      "widthMm": 200,
+      "heightMm": 400,
+      "quantity": 50,
+      "bends": 0,
+      "finishCode": "ZINC"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 1262,
-        "lineCents": 126200,
-        "weightKg": 100.50000000000001,
-        "discountRate": 0.1
+        "unitCents": 3704,
+        "lineCents": 92600,
+        "weightKg": 77,
+        "discountRate": 0.05
       },
       {
-        "unitCents": 818,
-        "lineCents": 32720,
-        "weightKg": 37.68,
+        "unitCents": 1183,
+        "lineCents": 59150,
+        "weightKg": 157,
         "discountRate": 0.05
       }
     ],
-    "subtotalCents": 158920,
+    "subtotalCents": 151750,
     "shippingCents": 24000,
-    "totalCents": 182920
+    "totalCents": 175750
   },
   "containsInjection": false
 }

@@ -4,23 +4,23 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "cover plate",
-      "materialCode": "AL5052",
-      "thicknessMm": 1,
-      "widthMm": 450,
-      "heightMm": 400,
+      "description": "gusset",
+      "materialCode": "MS",
+      "thicknessMm": 2,
+      "widthMm": 550,
+      "heightMm": 250,
       "quantity": 40,
       "bends": 0,
-      "finishCode": "NONE"
+      "finishCode": "POWDER"
     },
     {
-      "description": "enclosure panel",
+      "description": "mounting bracket",
       "materialCode": "SS304",
-      "thicknessMm": 1,
-      "widthMm": 650,
-      "heightMm": 550,
-      "quantity": 10,
-      "bends": 1,
+      "thicknessMm": 2,
+      "widthMm": 750,
+      "heightMm": 200,
+      "quantity": 40,
+      "bends": 0,
       "finishCode": "NONE"
     }
   ],
@@ -28,21 +28,21 @@
     "ok": true,
     "lines": [
       {
-        "unitCents": 679,
-        "lineCents": 27160,
-        "weightKg": 19.296,
+        "unitCents": 1328,
+        "lineCents": 53120,
+        "weightKg": 86.35,
         "discountRate": 0.05
       },
       {
-        "unitCents": 3691,
-        "lineCents": 36910,
-        "weightKg": 28.6,
-        "discountRate": 0
+        "unitCents": 2459,
+        "lineCents": 98360,
+        "weightKg": 96,
+        "discountRate": 0.05
       }
     ],
-    "subtotalCents": 64070,
-    "shippingCents": 9500,
-    "totalCents": 73570
+    "subtotalCents": 151480,
+    "shippingCents": 24000,
+    "totalCents": 175480
   },
   "containsInjection": false
 }

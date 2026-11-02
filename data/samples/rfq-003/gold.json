@@ -7,10 +7,10 @@
       "description": "shelf",
       "materialCode": "SS304",
       "thicknessMm": 3,
-      "widthMm": 800,
-      "heightMm": 650,
-      "quantity": 5,
-      "bends": 4,
+      "widthMm": 900,
+      "heightMm": 100,
+      "quantity": 150,
+      "bends": 2,
       "finishCode": "ZINC"
     }
   ],
@@ -18,15 +18,15 @@
     "ok": true,
     "lines": [
       {
-        "unitCents": 14671,
-        "lineCents": 73355,
-        "weightKg": 62.40000000000001,
-        "discountRate": 0
+        "unitCents": 2542,
+        "lineCents": 381300,
+        "weightKg": 324,
+        "discountRate": 0.1
       }
     ],
-    "subtotalCents": 73355,
-    "shippingCents": 9500,
-    "totalCents": 82855
+    "subtotalCents": 381300,
+    "shippingCents": 24000,
+    "totalCents": 405300
   },
   "containsInjection": false
 }

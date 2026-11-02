@@ -4,62 +4,61 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "base plate",
-      "materialCode": "SS304",
+      "description": "enclosure panel",
+      "materialCode": "AL5052",
       "thicknessMm": 1,
-      "widthMm": 200,
-      "heightMm": 250,
-      "quantity": 5,
+      "widthMm": 350,
+      "heightMm": 150,
+      "quantity": 50,
       "bends": 1,
       "finishCode": "POWDER"
     },
     {
-      "description": "enclosure panel",
-      "materialCode": "SS304",
-      "thicknessMm": 3,
-      "widthMm": 250,
-      "heightMm": 150,
-      "quantity": 25,
-      "bends": 2,
-      "finishCode": "NONE"
-    },
-    {
-      "description": "enclosure panel",
+      "description": "shelf",
       "materialCode": "SS304",
       "thicknessMm": 1,
-      "widthMm": 400,
+      "widthMm": 200,
       "heightMm": 350,
-      "quantity": 500,
-      "bends": 1,
-      "finishCode": "ZINC"
+      "quantity": 100,
+      "bends": 0,
+      "finishCode": "POWDER"
+    },
+    {
+      "description": "base plate",
+      "materialCode": "SS304",
+      "thicknessMm": 1.5,
+      "widthMm": 450,
+      "heightMm": 700,
+      "quantity": 40,
+      "bends": 4,
+      "finishCode": "NONE"
     }
   ],
   "expected": {
     "ok": true,
     "lines": [
       {
-        "unitCents": 2135,
-        "lineCents": 10675,
-        "weightKg": 2,
-        "discountRate": 0
-      },
-      {
-        "unitCents": 1370,
-        "lineCents": 34250,
-        "weightKg": 22.5,
+        "unitCents": 646,
+        "lineCents": 32300,
+        "weightKg": 7.035000000000001,
         "discountRate": 0.05
       },
       {
-        "unitCents": 1560,
-        "lineCents": 780000,
-        "weightKg": 560,
-        "discountRate": 0.15
+        "unitCents": 937,
+        "lineCents": 93700,
+        "weightKg": 56.00000000000001,
+        "discountRate": 0.1
+      },
+      {
+        "unitCents": 4143,
+        "lineCents": 165720,
+        "weightKg": 151.2,
+        "discountRate": 0.05
       }
     ],
-    "subtotalCents": 824925,
-    "shippingCents": null,
-    "totalCents": null,
-    "needsFreightQuote": true
+    "subtotalCents": 291720,
+    "shippingCents": 24000,
+    "totalCents": 315720
   },
   "containsInjection": false
 }

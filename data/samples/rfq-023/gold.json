@@ -7,21 +7,21 @@
       "description": "mounting bracket",
       "materialCode": "MS",
       "thicknessMm": null,
-      "widthMm": 700,
-      "heightMm": 250,
-      "quantity": 500,
-      "bends": 2,
-      "finishCode": "POWDER"
+      "widthMm": 350,
+      "heightMm": 700,
+      "quantity": 50,
+      "bends": 0,
+      "finishCode": "NONE"
     },
     {
-      "description": "enclosure panel",
-      "materialCode": "MS",
+      "description": "cover plate",
+      "materialCode": "SS304",
       "thicknessMm": 1.5,
-      "widthMm": 350,
-      "heightMm": 650,
-      "quantity": 10,
-      "bends": 0,
-      "finishCode": "ZINC"
+      "widthMm": 950,
+      "heightMm": 200,
+      "quantity": 20,
+      "bends": 4,
+      "finishCode": "NONE"
     }
   ],
   "expected": {

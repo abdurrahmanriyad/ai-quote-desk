@@ -2,13 +2,13 @@ From: Maya Torres <maya@harborkitchens.example>
 To: quotes@northline.example
 Subject: Request for quote
 
-Hello,
+Hi team,
 
 Please quote these parts:
 
-- 40 x gusset, 5 mm aluminum, 800 x 600 mm, 4 bends, finish: powdercoat
-- 20 x gusset, 3 mm 304 stainless, 1000 x 400 mm, 1 bend, finish: as cut
-- 20 x shelf, 5 mm CRS, 800 x 100 mm, 2 bends, finish: zinc
+- 500 x gusset, 3 mm 5052, 850 x 400 mm, flat, no bends, finish: painted
+- 25 x mounting bracket, 5 mm 5052, 500 x 250 mm, flat, no bends, finish: no finish
+- 50 x cover plate, 3 mm stainless steel, 100 x 300 mm, 4 bends, finish: powder coat
 
 Maya Torres
 Harbor Kitchens

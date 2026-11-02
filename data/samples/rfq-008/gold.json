@@ -6,21 +6,21 @@
     {
       "description": "cover plate",
       "materialCode": "MS",
-      "thicknessMm": 6,
-      "widthMm": 750,
-      "heightMm": 200,
-      "quantity": 500,
-      "bends": 1,
+      "thicknessMm": 5,
+      "widthMm": 250,
+      "heightMm": 650,
+      "quantity": 40,
+      "bends": 0,
       "finishCode": "NONE"
     },
     {
       "description": "enclosure panel",
-      "materialCode": "MS",
+      "materialCode": "SS304",
       "thicknessMm": 2,
-      "widthMm": 650,
-      "heightMm": 700,
-      "quantity": 50,
-      "bends": 4,
+      "widthMm": 1000,
+      "heightMm": 450,
+      "quantity": 500,
+      "bends": 0,
       "finishCode": "POWDER"
     }
   ],
@@ -28,19 +28,19 @@
     "ok": true,
     "lines": [
       {
-        "unitCents": 1694,
-        "lineCents": 847000,
-        "weightKg": 3532.4999999999995,
-        "discountRate": 0.15
+        "unitCents": 1750,
+        "lineCents": 70000,
+        "weightKg": 255.12500000000003,
+        "discountRate": 0.05
       },
       {
-        "unitCents": 4206,
-        "lineCents": 210300,
-        "weightKg": 357.175,
-        "discountRate": 0.05
+        "unitCents": 7258,
+        "lineCents": 3629000,
+        "weightKg": 3600.0000000000005,
+        "discountRate": 0.15
       }
     ],
-    "subtotalCents": 1057300,
+    "subtotalCents": 3699000,
     "shippingCents": null,
     "totalCents": null,
     "needsFreightQuote": true

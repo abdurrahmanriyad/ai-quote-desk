@@ -4,10 +4,10 @@
   "source": "request.txt",
   "lines": [
     {
-      "description": "mounting bracket",
-      "materialCode": "AL5052",
-      "thicknessMm": 5,
-      "widthMm": 700,
+      "description": "base plate",
+      "materialCode": "MS",
+      "thicknessMm": 3,
+      "widthMm": 650,
       "heightMm": 450,
       "quantity": 40,
       "bends": 4,
@@ -18,15 +18,15 @@
     "ok": true,
     "lines": [
       {
-        "unitCents": 4967,
-        "lineCents": 198680,
-        "weightKg": 168.84,
+        "unitCents": 3268,
+        "lineCents": 130720,
+        "weightKg": 275.53499999999997,
         "discountRate": 0.05
       }
     ],
-    "subtotalCents": 198680,
+    "subtotalCents": 130720,
     "shippingCents": 24000,
-    "totalCents": 222680
+    "totalCents": 154720
   },
   "containsInjection": false
 }

@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import catalogJson from '../../data/demo-company/catalog.json' with { type: 'json' };
 import rulesJson from '../../data/demo-company/pricing.json' with { type: 'json' };
-import { priceQuote, type Catalog, type LineRequest, type PricingRules } from './pricing.js';
+import { priceQuote, type Catalog, type LineRequest, type PricingRules } from './pricing';
 
 const ROOT = join(import.meta.dirname, '../../data/samples');
 
@@ -66,6 +66,13 @@ describe('sample set', () => {
       expect(material.aliases.some((alias) => request.includes(alias.toLowerCase())), gold.id).toBe(true);
       if (line.widthMm !== null) expect(request, gold.id).toContain(`${line.widthMm} x ${line.heightMm} mm`);
       if (line.thicknessMm !== null) expect(request, gold.id).toContain(`${line.thicknessMm} mm `);
+    }
+  });
+
+  it('keeps part names unique within a request', () => {
+    for (const { gold } of samples) {
+      const names = gold.lines.map((line) => (line as LineRequest & { description: string }).description);
+      expect(new Set(names).size, gold.id).toBe(names.length);
     }
   });
 

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import catalogJson from '../../data/demo-company/catalog.json' with { type: 'json' };
 import rulesJson from '../../data/demo-company/pricing.json' with { type: 'json' };
-import { priceQuote, type Catalog, type LineRequest, type PricingRules } from './pricing.js';
+import { priceQuote, type Catalog, type LineRequest, type PricingRules } from './pricing';
 
 const catalog = catalogJson as Catalog;
 const rules = rulesJson as PricingRules;

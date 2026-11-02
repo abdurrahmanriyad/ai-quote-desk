@@ -1,4 +1,4 @@
-import { connect, migrate } from '../src/db/index.js';
+import { connect, migrate } from '../src/db/index';
 
 const db = connect();
 await migrate(db);

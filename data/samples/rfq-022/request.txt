@@ -2,11 +2,11 @@ From: Omar Haddad <omar@atlassignworks.example>
 To: quotes@northline.example
 Subject: Quote request
 
-Hello,
+Good morning,
 
 Could you quote the following?
 
-- 50 x enclosure panel, 1 mm SS304, 250 x 200 mm, 4 bends
+- 500 x enclosure panel, 1 mm SS304, 250 x 450 mm, 4 bends
 
 Omar Haddad
 Atlas Signworks
